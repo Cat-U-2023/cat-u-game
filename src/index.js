@@ -1,9 +1,4 @@
 // crear un div con color que disminuye con el tiempo.
-
-const statusZone = document.querySelector(".status-bar");
-
-statusZone.innerHTML = "<div id='health'></div><div class='bar' id='hunger'></div><div class='bar' id='fun'></div><div class='bar' id='clean'></div>";
-
 const hunger = document.getElementById("hunger");
 const fun = document.getElementById("fun");
 const clean = document.getElementById("clean");
