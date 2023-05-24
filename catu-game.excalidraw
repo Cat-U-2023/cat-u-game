@@ -1,0 +1,96 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "IGjDkqMy8Q5sy5ulP3xaJ",
+      "type": "rectangle",
+      "x": 220.3713732918557,
+      "y": 169.55672554674766,
+      "width": 230.859685535772,
+      "height": 34.079953565925024,
+      "angle": 0,
+      "strokeColor": "#e67700",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 3
+      },
+      "seed": 1381221465,
+      "version": 69,
+      "versionNonce": 1435763703,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1684923142553,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "mGC4jnXw52tZrIc-IJIp1",
+      "type": "rectangle",
+      "x": 232.04885308790293,
+      "y": 177.71284767489155,
+      "width": 200.72363589436833,
+      "height": 19.317118945357862,
+      "angle": 0,
+      "strokeColor": "#e67700",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 3
+      },
+      "seed": 1191959575,
+      "version": 107,
+      "versionNonce": 313863319,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1684923193340,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "Ic-MaMO3B74ll0ig8y4Ay",
+      "type": "rectangle",
+      "x": 231.06225791993322,
+      "y": 176.93885452501164,
+      "width": 202.2729475201586,
+      "height": 20.859281698847628,
+      "angle": 0,
+      "strokeColor": "#5c940d",
+      "backgroundColor": "#82c91e",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 3
+      },
+      "seed": 700087447,
+      "version": 1131,
+      "versionNonce": 1202852089,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1684923252606,
+      "link": null,
+      "locked": false
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#0004"
+  },
+  "files": {}
+}
