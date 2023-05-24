@@ -52,6 +52,7 @@ body {
   margin-top: 5%;
   margin-bottom: 9%;
   margin-left: 6%;
+  transition: width 1.25s ease-in-out;
 }
 
 #health {
