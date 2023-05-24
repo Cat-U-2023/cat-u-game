@@ -4,14 +4,16 @@ const statusZone = document.querySelector(".status-bar");
 
 statusZone.innerHTML = "<div id='health'></div><div class='bar' id='hunger'></div><div class='bar' id='fun'></div><div class='bar' id='clean'></div>";
 
-const bars = document.getElementsByClassName("bar");
+const hunger = document.getElementById("hunger");
+const fun = document.getElementById("fun");
+const clean = document.getElementById("clean");
 
-function decrementBars(bars) {
+function decrementHunger() {
   let width = 100;
 
   function decrement() {
     width--;
-    bars.style.width = width + "%";
+    hunger.style.width = width + "%";
 
     if (width === 0) {
       clearInterval(interval);
@@ -19,10 +21,38 @@ function decrementBars(bars) {
   }
 
   const interval = setInterval(decrement, 1000);
-
-  for (let i = 0; i < bars.length; i++) {
-    decrementBars(bars[i]);
-  }
 }
 
-decrementBars(bars);
+function decrementFun() {
+  let width = 100;
+
+  function decrement() {
+    width--;
+    fun.style.width = width + "%";
+
+    if (width === 0) {
+      clearInterval(interval);
+    }
+  }
+
+  const interval = setInterval(decrement, 2000);
+}
+
+function decrementClean() {
+  let width = 100;
+
+  function decrement() {
+    width--;
+    clean.style.width = width + "%";
+
+    if (width === 0) {
+      clearInterval(interval);
+    }
+  }
+
+  const interval = setInterval(decrement, 3000);
+}
+
+decrementHunger();
+decrementFun();
+decrementClean();
