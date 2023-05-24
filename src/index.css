@@ -31,12 +31,12 @@ body {
   width: 20%;
 }
 
-.bar-container {
+.status-container {
   background-color: rgb(195 0 255 / 47.3%);
   width: 30%;
 }
 
-.bars {
+.bars-container {
   width: 76%;
   height: 100%;
   margin-left: 1rem;
