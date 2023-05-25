@@ -1,15 +1,13 @@
 // crear un div con color que disminuye con el tiempo.
-const hunger = document.getElementById("hunger");
+const hungerBar = document.getElementById("hunger");
 const fun = document.getElementById("fun");
 const clean = document.getElementById("clean");
-
+let hunger = 100;
 function decrementHunger() {
-  let width = 100;
-
   function decrement() {
-    width--;
-    hunger.style.width = width + "%";
-    if (width === 0) {
+    hunger--;
+    hungerBar.style.width = hunger + "%";
+    if (hunger === 0) {
       clearInterval(interval);
     }
   }
@@ -50,15 +48,15 @@ decrementHunger();
 decrementFun();
 decrementClean();
 
-const food = document.querySelector(".food");
+const friskis = document.querySelector(".food");
 const game = document.querySelector(".game");
 const poop = document.querySelector(".clean");
 
-function resetFood() {
-  return decrementHunger();
+function feedCat() {
+  hunger = 100;
 };
 
-food.addEventListener("click", resetFood);
+friskis.addEventListener("click", feedCat);
 
 //
 function resetGame() {
