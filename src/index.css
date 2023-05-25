@@ -2,20 +2,39 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 100vh;
 }
 
 body {
-  background: url("img/Fondo-CatU-Game.webp") no-repeat center center fixed;
   overflow: hidden;
-  background-size: cover;
+  background-color: black;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
+  --r: calc(2560 / 1440);
+  --cv: clamp(0px, (100vw - 100vh * var(--r)) * 10000, 1vh);
+  --ch: clamp(0px, (100vh * var(--r) - 100vw) * 10000, 1vw);
+
+  height: calc((var(--cv) + var(--ch) / var(--r)) * 100);
+  width: calc((var(--ch) + var(--cv) * var(--r)) * 100);
+}
+
+.fit-size {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  max-width: 2560px;
+  max-height: 1440px;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background: url("img/Fondo-CatU-Game.webp") no-repeat;
+  background-size: contain;
 }
 
 .up {
@@ -83,17 +102,22 @@ body {
 }
 
 .cat {
-  width: 25rem;
-  margin-bottom: 17%;
-}
-
-.center {
+  width: 65%;
+  margin-bottom: 15%;
 }
 
 .left {
   display: flex;
   justify-content: space-between;
   width: 30.3%;
+  background-color: #ffffff48;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  width: 35%;
+  background-color: #ffffff48;
 }
 
 .food {
@@ -110,15 +134,14 @@ body {
 }
 
 .right {
-  background-color: rgb(0 255 255 / 39.2%);
   width: 30%;
   display: flex;
   justify-content: center;
+  background-color: #ffffff48;
 }
 
 .clean {
   background-attachment: fixed;
-  background-color: rgb(0 0 0 / 29.7%);
   width: 50%;
   height: 70%;
   margin-bottom: 5%;
