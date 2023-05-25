@@ -51,3 +51,29 @@ function decrementClean() {
 decrementHunger();
 decrementFun();
 decrementClean();
+
+
+const food = document.querySelector(".food")
+const game = document.querySelector(".game");
+const poop = document.querySelector(".clean");
+
+
+function resetFood() {
+  return decrementHunger()
+  };
+
+food.addEventListener("click", resetFood);
+
+//
+function resetGame() {
+  return decrementHunger()
+  };
+
+game.addEventListener("click", resetGame);
+
+//
+function resetPoop() {
+  return decrementHunger()
+  };
+
+poop.addEventListener("click", resetPoop);
