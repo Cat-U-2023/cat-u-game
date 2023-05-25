@@ -110,39 +110,37 @@ body {
   display: flex;
   justify-content: space-between;
   width: 30.3%;
-  background-color: #ffffff48;
 }
 
 .center {
   display: flex;
   justify-content: center;
   width: 35%;
-  background-color: #ffffff48;
 }
 
 .food {
   background-attachment: fixed;
   width: 40%;
   height: 40%;
+  margin-bottom: 5%;
 }
 
 .game {
   background-attachment: fixed;
   width: 13%;
   height: 15%;
-  margin-top: 11%;
+  margin-top: 8%;
 }
 
 .right {
   width: 30%;
   display: flex;
   justify-content: center;
-  background-color: #ffffff48;
 }
 
 .clean {
   background-attachment: fixed;
   width: 50%;
   height: 70%;
-  margin-bottom: 5%;
+  margin-bottom: 17%;
 }
