@@ -9,12 +9,10 @@ function decrementHunger() {
   function decrement() {
     width--;
     hunger.style.width = width + "%";
-
     if (width === 0) {
       clearInterval(interval);
     }
   }
-
   const interval = setInterval(decrement, 1000);
 }
 
@@ -52,28 +50,26 @@ decrementHunger();
 decrementFun();
 decrementClean();
 
-
-const food = document.querySelector(".food")
+const food = document.querySelector(".food");
 const game = document.querySelector(".game");
 const poop = document.querySelector(".clean");
 
-
 function resetFood() {
-  return decrementHunger()
-  };
+  return decrementHunger();
+};
 
 food.addEventListener("click", resetFood);
 
 //
 function resetGame() {
-  return decrementHunger()
-  };
+  return decrementFun();
+};
 
 game.addEventListener("click", resetGame);
 
 //
 function resetPoop() {
-  return decrementHunger()
-  };
+  return decrementClean();
+};
 
 poop.addEventListener("click", resetPoop);
