@@ -42,7 +42,7 @@ body {
   margin-left: 1rem;
   margin-top: 5%;
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   flex-direction: column;
 }
 
