@@ -5,6 +5,27 @@ body {
   height: 100vh;
 }
 
+.left,
+.center,
+.right,
+.menu,
+.bars-container div,
+.frames,
+.bar,
+.cat,
+.food,
+.clean,
+.game {
+  user-select: none;
+}
+
+.cat,
+.food,
+.game,
+.clean {
+  cursor: pointer;
+}
+
 body {
   overflow: hidden;
   background-color: black;
