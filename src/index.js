@@ -1,8 +1,11 @@
 // crear un div con color que disminuye con el tiempo.
 const hungerBar = document.getElementById("hunger");
-const fun = document.getElementById("fun");
-const clean = document.getElementById("clean");
+const funBar = document.getElementById("fun");
+const cleanBar = document.getElementById("clean");
 let hunger = 100;
+let fun = 100;
+let clean = 100;
+
 function decrementHunger() {
   function decrement() {
     hunger--;
@@ -15,13 +18,11 @@ function decrementHunger() {
 }
 
 function decrementFun() {
-  let width = 100;
-
   function decrement() {
-    width--;
-    fun.style.width = width + "%";
+    fun--;
+    funBar.style.width = fun + "%";
 
-    if (width === 0) {
+    if (fun === 0) {
       clearInterval(interval);
     }
   }
@@ -30,13 +31,11 @@ function decrementFun() {
 }
 
 function decrementClean() {
-  let width = 100;
-
   function decrement() {
-    width--;
-    clean.style.width = width + "%";
+    clean--;
+    cleanBar.style.width = clean + "%";
 
-    if (width === 0) {
+    if (clean === 0) {
       clearInterval(interval);
     }
   }
@@ -60,14 +59,14 @@ friskis.addEventListener("click", feedCat);
 
 //
 function resetGame() {
-  return decrementFun();
+  fun = 100;
 };
 
 game.addEventListener("click", resetGame);
 
 //
 function resetPoop() {
-  return decrementClean();
+  clean = 100;
 };
 
 poop.addEventListener("click", resetPoop);
