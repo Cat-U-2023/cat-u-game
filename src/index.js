@@ -1,75 +1,75 @@
 // crear un div con color que disminuye con el tiempo.
-const hunger = document.getElementById("hunger");
-const fun = document.getElementById("fun");
-const clean = document.getElementById("clean");
+const hungerBar = document.getElementById("hunger");
+const funBar = document.getElementById("fun");
+const cleanBar = document.getElementById("clean");
+let hunger = 100;
+let fun = 100;
+let clean = 100;
+
+const songs = document.querySelector("audio");
+songs.volume = 0.2;
 
 function decrementHunger() {
-  let width = 100;
-
   function decrement() {
-    width--;
-    hunger.style.width = width + "%";
-    if (width === 0) {
+    hunger--;
+    hungerBar.style.width = hunger + "%";
+    if (hunger === 0) {
       clearInterval(interval);
     }
   }
-  const interval = setInterval(decrement, 1000);
-}
-
-function decrementFun() {
-  let width = 100;
-
-  function decrement() {
-    width--;
-    fun.style.width = width + "%";
-
-    if (width === 0) {
-      clearInterval(interval);
-    }
-  }
-
   const interval = setInterval(decrement, 2000);
 }
 
-function decrementClean() {
-  let width = 100;
-
+function decrementFun() {
   function decrement() {
-    width--;
-    clean.style.width = width + "%";
+    fun--;
+    funBar.style.width = fun + "%";
 
-    if (width === 0) {
+    if (fun === 0) {
       clearInterval(interval);
     }
   }
 
-  const interval = setInterval(decrement, 3000);
+  const interval = setInterval(decrement, 4000);
+}
+
+function decrementClean() {
+  function decrement() {
+    clean--;
+    cleanBar.style.width = clean + "%";
+
+    if (clean === 0) {
+      clearInterval(interval);
+    }
+  }
+
+  const interval = setInterval(decrement, 5000);
 }
 
 decrementHunger();
 decrementFun();
 decrementClean();
 
-const food = document.querySelector(".food");
+const friskis = document.querySelector(".food");
 const game = document.querySelector(".game");
 const poop = document.querySelector(".clean");
 
-function resetFood() {
-  return decrementHunger();
+function feedCat() {
+  hunger = 100;
 };
 
-food.addEventListener("click", resetFood);
+friskis.addEventListener("click", feedCat);
 
 //
 function resetGame() {
-  return decrementFun();
+  fun = 100;
 };
 
 game.addEventListener("click", resetGame);
 
 //
 function resetPoop() {
-  return decrementClean();
+  clean = 100;
 };
 
 poop.addEventListener("click", resetPoop);

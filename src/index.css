@@ -21,6 +21,8 @@ body {
 
   height: calc((var(--cv) + var(--ch) / var(--r)) * 100);
   width: calc((var(--ch) + var(--cv) * var(--r)) * 100);
+  position: relative;
+  z-index: 2;
 }
 
 .fit-size {
@@ -89,7 +91,7 @@ body {
 
 .frames {
   width: 25%;
-  position: fixed;
+  position: absolute;
   z-index: 1;
 }
 
@@ -143,4 +145,8 @@ body {
   width: 50%;
   height: 70%;
   margin-bottom: 17%;
+}
+
+audio {
+  margin-top: 4%;
 }
