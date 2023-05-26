@@ -14,7 +14,7 @@ function decrementHunger() {
       clearInterval(interval);
     }
   }
-  const interval = setInterval(decrement, 1000);
+  const interval = setInterval(decrement, 2000);
 }
 
 function decrementFun() {
@@ -27,7 +27,7 @@ function decrementFun() {
     }
   }
 
-  const interval = setInterval(decrement, 2000);
+  const interval = setInterval(decrement, 4000);
 }
 
 function decrementClean() {
@@ -40,7 +40,7 @@ function decrementClean() {
     }
   }
 
-  const interval = setInterval(decrement, 3000);
+  const interval = setInterval(decrement, 5000);
 }
 
 decrementHunger();
