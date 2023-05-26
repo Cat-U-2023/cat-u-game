@@ -6,8 +6,9 @@ let hunger = 100;
 let fun = 100;
 let clean = 100;
 
-const songs = document.querySelector("audio");
-songs.volume = 0.2;
+// WIP
+// const songs = document.querySelector("audio");
+// songs.volume = 0.2;
 
 function decrementHunger() {
   function decrement() {
