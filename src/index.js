@@ -1,76 +1,69 @@
-// crear un div con color que disminuye con el tiempo.
+const songs = document.querySelector("audio");
+songs.volume = 0.2;
+
+const healthBar = document.getElementById("health");
 const hungerBar = document.getElementById("hunger");
 const funBar = document.getElementById("fun");
 const cleanBar = document.getElementById("clean");
+
+document.querySelector(".food").addEventListener("click", feedCat);
+document.querySelector(".game").addEventListener("click", resetGame);
+document.querySelector(".clean").addEventListener("click", resetPoop);
+
 let hunger = 100;
 let fun = 100;
 let clean = 100;
 
-// WIP
-// const songs = document.querySelector("audio");
-// songs.volume = 0.2;
-
-function decrementHunger() {
-  function decrement() {
-    hunger--;
-    hungerBar.style.width = hunger + "%";
-    if (hunger === 0) {
-      clearInterval(interval);
-    }
-  }
-  const interval = setInterval(decrement, 2000);
-}
-
-function decrementFun() {
-  function decrement() {
-    fun--;
-    funBar.style.width = fun + "%";
-
-    if (fun === 0) {
-      clearInterval(interval);
-    }
-  }
-
-  const interval = setInterval(decrement, 4000);
-}
-
-function decrementClean() {
-  function decrement() {
-    clean--;
-    cleanBar.style.width = clean + "%";
-
-    if (clean === 0) {
-      clearInterval(interval);
-    }
-  }
-
-  const interval = setInterval(decrement, 5000);
-}
-
-decrementHunger();
-decrementFun();
-decrementClean();
-
-const friskis = document.querySelector(".food");
-const game = document.querySelector(".game");
-const poop = document.querySelector(".clean");
-
 function feedCat() {
   hunger = 100;
+  return hunger;
 };
 
-friskis.addEventListener("click", feedCat);
-
-//
 function resetGame() {
   fun = 100;
+  return fun;
 };
 
-game.addEventListener("click", resetGame);
-
-//
 function resetPoop() {
   clean = 100;
+  return clean;
 };
 
-poop.addEventListener("click", resetPoop);
+let totalBars;
+const hungerInterval = 2000;
+const funInterval = 4000;
+const cleanInterval = 5000;
+const healthInterval = (hungerInterval + funInterval + cleanInterval) / 3;
+
+function decreaseBars() {
+  function decreaseHunger() {
+    hunger--;
+    hungerBar.style.width = hunger + "%";
+
+    return hunger;
+  }
+  setInterval(decreaseHunger, hungerInterval);
+
+  function decreaseFun() {
+    fun--;
+    funBar.style.width = fun + "%";
+    return fun;
+  }
+  setInterval(decreaseFun, funInterval);
+
+  function decreaseClean() {
+    clean--;
+    cleanBar.style.width = clean + "%";
+    return clean;
+  }
+  setInterval(decreaseClean, cleanInterval);
+  function decreaseLife() {
+    totalBars = (decreaseHunger() + decreaseFun() + decreaseClean()) / 3;
+    totalBars--;
+    healthBar.style.width = totalBars + "%";
+  }
+  setInterval(decreaseLife, healthInterval);
+  decreaseLife();
+}
+
+decreaseBars();
