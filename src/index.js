@@ -37,34 +37,32 @@ const funInterval = 4000;
 const cleanInterval = 5000;
 const healthInterval = (hungerInterval + funInterval + cleanInterval) / 3;
 
-function decreaseBars() {
-  function decreaseHunger() {
-    hunger--;
-    hungerBar.style.width = hunger + "%";
-    return hunger;
-  }
-  setInterval(decreaseHunger, hungerInterval);
-
-  function decreaseFun() {
-    fun--;
-    funBar.style.width = fun + "%";
-    return fun;
-  }
-  setInterval(decreaseFun, funInterval);
-
-  function decreaseClean() {
-    clean--;
-    cleanBar.style.width = clean + "%";
-    return clean;
-  }
-  setInterval(decreaseClean, cleanInterval);
-  function decreaseLife() {
-    totalBars = (decreaseHunger() + decreaseFun() + decreaseClean()) / 3;
-    totalBars--;
-    healthBar.style.width = totalBars + "%";
-  }
-  setInterval(decreaseLife, healthInterval);
-  decreaseLife();
+function decreaseHunger() {
+  hunger--;
+  hungerBar.style.width = hunger + "%";
+  return hunger;
 }
+setInterval(decreaseHunger, hungerInterval);
 
-decreaseBars();
+function decreaseFun() {
+  fun--;
+  funBar.style.width = fun + "%";
+  return fun;
+}
+setInterval(decreaseFun, funInterval);
+
+function decreaseClean() {
+  clean--;
+  cleanBar.style.width = clean + "%";
+  return clean;
+}
+setInterval(decreaseClean, cleanInterval);
+
+function decreaseLife() {
+  totalBars = (decreaseHunger() + decreaseFun() + decreaseClean()) / 3;
+  totalBars--;
+  healthBar.style.width = totalBars + "%";
+}
+setInterval(decreaseLife, healthInterval);
+
+decreaseLife();
