@@ -1,5 +1,5 @@
-const songs = document.querySelector("audio");
-songs.volume = 0.2;
+// const songs = document.querySelector("audio");
+// songs.volume = 0.2;
 
 const healthBar = document.getElementById("health");
 const hungerBar = document.getElementById("hunger");
