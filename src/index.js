@@ -1,3 +1,5 @@
+/* NO DESCOMENTAR ESTE CÓDIGO SI NO ESTÁ DESCOMENTADO EL ARCHIVO DE AUDIO
+EN HTML PORQUE ROMPE TODO EL CÓDIGO !!!! */
 // const songs = document.querySelector("audio");
 // songs.volume = 0.2;
 
@@ -39,7 +41,6 @@ function decreaseBars() {
   function decreaseHunger() {
     hunger--;
     hungerBar.style.width = hunger + "%";
-
     return hunger;
   }
   setInterval(decreaseHunger, hungerInterval);
