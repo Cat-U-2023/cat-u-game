@@ -3,7 +3,6 @@ EN HTML PORQUE ROMPE TODO EL CÓDIGO !!!! */
 // const songs = document.querySelector("audio");
 // songs.volume = 0.2;
 
-
 const healthBar = document.getElementById("health");
 const hungerBar = document.getElementById("hunger");
 const funBar = document.getElementById("fun");
@@ -61,28 +60,42 @@ setInterval(decreaseClean, cleanInterval);
 
 // cambio de imágenes
 
-const catImage = document.querySelector(".cat")
+const catImage = document.querySelector(".cat");
 
-function changeHungry(){
-  if (hunger <= 90){
-    catImage.src = "img/img-status-cat/Cat-U-Hambriento.png"
-  }else {
-    catImage.src = "img/img-status-cat/Cat-U-Normal.png"
+// function changeHungry() {
+//   if (hunger <= 90) {
+//     catImage.src = "img/img-status-cat/Cat-U-Hambriento.png";
+//   } else {
+//     catImage.src = "img/img-status-cat/Cat-U-Normal.png";
+//   }
+// }
+
+// function changeFun() {
+//   if (fun <= 70) {
+//     catImage.src = "img/img-status-cat/Cat-U-Enfadado.png";
+//   } else {
+//     catImage.src = "img/img-status-cat/Cat-U-Normal.png";
+//   }
+// }
+
+// function changeClean() {
+//   if (clean <= 40) {
+//     catImage.src = "img/img-status-cat/Cat-U-Sucio.png";
+//   }
+// }
+
+function changeStatus() {
+  if (hunger <= 90) {
+    catImage.src = "img/img-status-cat/Cat-U-Hambriento.png";
   }
-}
-
-function changeFun(){
-  if (fun <= 70){
-    catImage.src = "img/img-status-cat/Cat-U-Enfadado.png"
+  if (fun <= 70) {
+    catImage.src = "img/img-status-cat/Cat-U-Enfadado.png";
+  }
+  if (clean <= 40) {
+    catImage.src = "img/img-status-cat/Cat-U-Sucio.png";
   } else {
-    catImage.src = "img/img-status-cat/Cat-U-Normal.png"
+    catImage.src = "img/img-status-cat/Cat-U-Normal.png";
   }
-}
-
-function changeClean(){
-  if (fun <= 40){
-    catImage.src = "img/img-status-cat/Cat-U-Sucio.png"
-  } 
 }
 
 // bara de vida
@@ -91,12 +104,9 @@ function decreaseLife() {
   totalBars = (decreaseHunger() + decreaseFun() + decreaseClean()) / 3;
   totalBars--;
   healthBar.style.width = totalBars + "%";
-  changeHungry()
-  changeFun()
-  changeClean()
+  changeStatus();
 }
+
 setInterval(decreaseLife, healthInterval);
 
 decreaseLife();
-
-
