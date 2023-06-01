@@ -19,7 +19,6 @@ body {
   user-select: none;
 }
 
-.cat,
 .food,
 .game,
 .clean {
@@ -69,6 +68,12 @@ body {
 
 .menu {
   width: 20%;
+}
+
+.menu img {
+  width: 45%;
+  margin: 2rem;
+  cursor: pointer;
 }
 
 .status-container {
@@ -166,4 +171,74 @@ body {
   width: 50%;
   height: 70%;
   margin-bottom: 17%;
+}
+
+.window-notice {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(41 33 40 / 74.8%);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+  z-index: 999;
+}
+
+.window-notice .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/img/Fondo-Windows-Content.png") no-repeat;
+  background-position: center;
+  background-size: 90%;
+  width: 60%;
+  height: 100%;
+  max-width: 50%;
+}
+
+.window-notice .content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  height: 50%;
+  color: white;
+  text-shadow: 1px 1px 1px #000;
+  font-family: "montserrat alternates", sans-serif;
+  font-size: 1.25vw;
+  background-attachment: fixed;
+}
+
+.window-notice .content-buttons {
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 1px #000;
+  font-family: "montserrat alternates", sans-serif;
+  cursor: pointer;
+}
+
+.text-center {
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 1px #000;
+  font-family: "montserrat alternates", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 2px 2px 1px #000;
+  font-size: 1.5vw;
+  transition: 0.5s ease;
+}
+
+a:hover {
+  transform: scale(1.25);
+  text-shadow: 1px 3px 3px #000;
 }
