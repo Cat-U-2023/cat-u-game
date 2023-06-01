@@ -4,6 +4,8 @@ const healthBar = document.getElementById("health");
 const hungerBar = document.getElementById("hunger");
 const funBar = document.getElementById("fun");
 const cleanBar = document.getElementById("clean");
+const alert = document.getElementById("close-button");
+const windowAlert = document.getElementById("window-notice");
 let count = 0;
 
 document.querySelector(".food").addEventListener("click", feedCat);
@@ -22,6 +24,11 @@ function toggleSound() {
     songs.pause();
     musicButton.src = "img/img-bottons/Musica-Off.png";
   }
+}
+
+alert.addEventListener("click", closeAlert);
+function closeAlert() {
+  windowAlert.style.display = "none";
 }
 
 let hunger = 100;
