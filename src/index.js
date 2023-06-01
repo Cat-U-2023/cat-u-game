@@ -2,7 +2,7 @@
 EN HTML PORQUE ROMPE TODO EL CÓDIGO !!!! */
 // const songs = document.querySelector("audio");
 // songs.volume = 0.2;
-import Swal from "sweetalert2";
+
 
 const healthBar = document.getElementById("health");
 const hungerBar = document.getElementById("hunger");
@@ -68,8 +68,3 @@ setInterval(decreaseLife, healthInterval);
 
 decreaseLife();
 
-Swal.fire({
-  imageUrl: "https://placeholder.pics/svg/300x1500",
-  imageHeight: 1500,
-  imageAlt: "A tall image"
-});
