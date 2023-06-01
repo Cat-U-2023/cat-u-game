@@ -59,12 +59,44 @@ function decreaseClean() {
 }
 setInterval(decreaseClean, cleanInterval);
 
+// cambio de imágenes
+
+const catImage = document.querySelector(".cat")
+
+function changeHungry(){
+  if (hunger <= 90){
+    catImage.src = "img/img-status-cat/Cat-U-Hambriento.png"
+  }else {
+    catImage.src = "img/img-status-cat/Cat-U-Normal.png"
+  }
+}
+
+function changeFun(){
+  if (fun <= 70){
+    catImage.src = "img/img-status-cat/Cat-U-Enfadado.png"
+  } else {
+    catImage.src = "img/img-status-cat/Cat-U-Normal.png"
+  }
+}
+
+function changeClean(){
+  if (fun <= 40){
+    catImage.src = "img/img-status-cat/Cat-U-Sucio.png"
+  } 
+}
+
+// bara de vida
+
 function decreaseLife() {
   totalBars = (decreaseHunger() + decreaseFun() + decreaseClean()) / 3;
   totalBars--;
   healthBar.style.width = totalBars + "%";
+  changeHungry()
+  changeFun()
+  changeClean()
 }
 setInterval(decreaseLife, healthInterval);
 
 decreaseLife();
+
 
