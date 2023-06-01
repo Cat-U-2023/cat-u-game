@@ -71,6 +71,11 @@ body {
   width: 20%;
 }
 
+.menu img {
+  width: 45%;
+  margin: 2rem;
+}
+
 .status-container {
   width: 30%;
 }

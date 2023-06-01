@@ -1,16 +1,28 @@
-/* NO DESCOMENTAR ESTE CÓDIGO SI NO ESTÁ DESCOMENTADO EL ARCHIVO DE AUDIO
-EN HTML PORQUE ROMPE TODO EL CÓDIGO !!!! */
-// const songs = document.querySelector("audio");
-// songs.volume = 0.2;
-
+const songs = document.querySelector("audio");
+const musicButton = document.querySelector(".menu img");
 const healthBar = document.getElementById("health");
 const hungerBar = document.getElementById("hunger");
 const funBar = document.getElementById("fun");
 const cleanBar = document.getElementById("clean");
+let count = 0;
 
 document.querySelector(".food").addEventListener("click", feedCat);
 document.querySelector(".game").addEventListener("click", resetGame);
 document.querySelector(".clean").addEventListener("click", resetPoop);
+
+musicButton.addEventListener("click", toggleSound);
+songs.volume = 0.2;
+function toggleSound() {
+  if (count === 0) {
+    count = 1;
+    songs.play();
+    musicButton.src = "img/img-bottons/Musica-On.png";
+  } else {
+    count = 0;
+    songs.pause();
+    musicButton.src = "img/img-bottons/Musica-Off.png";
+  }
+}
 
 let hunger = 100;
 let fun = 100;
