@@ -33,7 +33,7 @@ function resetPoop() {
 
 let totalBars;
 const hungerInterval = 2000;
-const funInterval = 4000;
+const funInterval = 3000;
 const cleanInterval = 5000;
 const healthInterval = (hungerInterval + funInterval + cleanInterval) / 3;
 
@@ -62,38 +62,18 @@ setInterval(decreaseClean, cleanInterval);
 
 const catImage = document.querySelector(".cat");
 
-// function changeHungry() {
-//   if (hunger <= 90) {
-//     catImage.src = "img/img-status-cat/Cat-U-Hambriento.png";
-//   } else {
-//     catImage.src = "img/img-status-cat/Cat-U-Normal.png";
-//   }
-// }
-
-// function changeFun() {
-//   if (fun <= 70) {
-//     catImage.src = "img/img-status-cat/Cat-U-Enfadado.png";
-//   } else {
-//     catImage.src = "img/img-status-cat/Cat-U-Normal.png";
-//   }
-// }
-
-// function changeClean() {
-//   if (clean <= 40) {
-//     catImage.src = "img/img-status-cat/Cat-U-Sucio.png";
-//   }
-// }
-
 function changeStatus() {
-  if (hunger <= 90) {
+  if (hunger <= 70) {
     catImage.src = "img/img-status-cat/Cat-U-Hambriento.png";
   }
-  if (fun <= 70) {
+  if (fun <= 50) {
     catImage.src = "img/img-status-cat/Cat-U-Enfadado.png";
   }
   if (clean <= 40) {
     catImage.src = "img/img-status-cat/Cat-U-Sucio.png";
-  } else {
+  } else if (hunger > 70 &&
+             fun > 50 &&
+             clean > 40) {
     catImage.src = "img/img-status-cat/Cat-U-Normal.png";
   }
 }
