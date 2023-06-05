@@ -51,9 +51,9 @@ function resetPoop() {
 };
 
 let totalBars;
-const hungerInterval = 2000;
-const funInterval = 3000;
-const cleanInterval = 5000;
+const hungerInterval = 200;
+const funInterval = 300;
+const cleanInterval = 500;
 const healthInterval = (hungerInterval + funInterval + cleanInterval) / 3;
 
 function decreaseHunger() {
@@ -77,7 +77,7 @@ function decreaseClean() {
 }
 setInterval(decreaseClean, cleanInterval);
 
-// cambio de imágenes
+// cambio de imágenes gato
 
 const catImage = document.querySelector(".cat");
 
@@ -97,6 +97,31 @@ function changeStatus() {
   }
 }
 
+// cambio img de botones 
+
+const buttonFood = document.querySelector(".food");
+const buttonBall = document.querySelector(".game");
+const buttonSandBox = document.querySelector(".clean");
+
+function changeButton() {
+  if (hunger <= 70) {
+    buttonFood.src = "img/img-bottons/Btn-food.png";
+  } else {
+    buttonFood.src = "img/img-bottons/btn-food-2.png";
+  }
+  if (fun <= 50) {
+    buttonBall.src = "img/img-bottons/btn-fun-2.png";
+  } else {
+    buttonBall.src = "img/img-bottons/btn-fun.png";
+  }
+  if (clean <= 40) {
+    buttonSandBox.src = "img/img-bottons/Clean-3.webp";
+  } else {
+    buttonSandBox.src = "img/img-bottons/Clean.webp";
+  }
+}
+
+
 // bara de vida
 
 function decreaseLife() {
@@ -104,8 +129,10 @@ function decreaseLife() {
   totalBars--;
   healthBar.style.width = totalBars + "%";
   changeStatus();
+  changeButton();
 }
 
 setInterval(decreaseLife, healthInterval);
 
 decreaseLife();
+
