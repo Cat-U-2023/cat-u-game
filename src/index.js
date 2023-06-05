@@ -51,9 +51,9 @@ function resetPoop() {
 };
 
 let totalBars;
-const hungerInterval = 200;
-const funInterval = 300;
-const cleanInterval = 500;
+const hungerInterval = 1300;
+const funInterval = 1400;
+const cleanInterval = 1600;
 const healthInterval = (hungerInterval + funInterval + cleanInterval) / 3;
 
 function decreaseHunger() {
@@ -79,25 +79,25 @@ setInterval(decreaseClean, cleanInterval);
 
 // cambio de imágenes gato
 
-const catImage = document.querySelector(".cat");
+// const catImage = document.querySelector(".cat");
 
-function changeStatus() {
-  if (hunger <= 70) {
-    catImage.src = "img/img-status-cat/Cat-U-Hambriento.png";
-  }
-  if (fun <= 50) {
-    catImage.src = "img/img-status-cat/Cat-U-Enfadado.png";
-  }
-  if (clean <= 40) {
-    catImage.src = "img/img-status-cat/Cat-U-Sucio.png";
-  } else if (hunger > 70 &&
-             fun > 50 &&
-             clean > 40) {
-    catImage.src = "img/img-status-cat/Cat-U-Normal.png";
-  }
-}
+// function changeStatus() {
+//   if (hunger <= 70) {
+//     catImage.src = "img/img-status-cat/Cat-U-Hambriento.png";
+//   }
+//   if (fun <= 50) {
+//     catImage.src = "img/img-status-cat/Cat-U-Enfadado.png";
+//   }
+//   if (clean <= 40) {
+//     catImage.src = "img/img-status-cat/Cat-U-Sucio.png";
+//   } else if (hunger > 70 &&
+//              fun > 50 &&
+//              clean > 40) {
+//     catImage.src = "img/img-status-cat/Cat-U-Normal.png";
+//   }
+// }
 
-// cambio img de botones 
+// cambio img de botones
 
 const buttonFood = document.querySelector(".food");
 const buttonBall = document.querySelector(".game");
@@ -121,18 +121,16 @@ function changeButton() {
   }
 }
 
-
 // bara de vida
 
 function decreaseLife() {
   totalBars = (decreaseHunger() + decreaseFun() + decreaseClean()) / 3;
   totalBars--;
   healthBar.style.width = totalBars + "%";
-  changeStatus();
+  // changeStatus();
   changeButton();
 }
 
 setInterval(decreaseLife, healthInterval);
 
 decreaseLife();
-
