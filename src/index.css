@@ -185,7 +185,7 @@ body {
   right: 0;
   top: 0;
   position: fixed;
-  z-index: 999;
+  z-index: -999;
 }
 
 .window-notice .content {
@@ -241,4 +241,11 @@ a {
 a:hover {
   transform: scale(1.25);
   text-shadow: 1px 3px 3px #000;
+}
+
+.minigame {
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
 }
