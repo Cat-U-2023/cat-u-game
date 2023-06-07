@@ -99,13 +99,11 @@ function changeStatus() {
   }
   if (clean <= 40 && fun <= 50) {
     catImage.src = "img/img-status-cat/cat-enfadado-sucio.png";
-    if (hunger <= 5 && fun <= 5 && clean <= 5) {
-      catImage.src = "img/img-status-cat/cat-pocasalud.png";
-    }
-  } else if (hunger > 70 &&
-             fun > 50 &&
-             clean > 40) {
+  }
+  if (hunger > 70 && fun > 50 && clean > 40) {
     catImage.src = "img/img-status-cat/cat-normal.png";
+  } else if (hunger < 70 && fun < 50 && clean < 40) {
+    catImage.src = "img/img-status-cat/cat-pocasalud.png";
   }
 }
 
