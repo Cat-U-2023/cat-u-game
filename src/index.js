@@ -3,6 +3,8 @@ EN HTML PORQUE ROMPE TODO EL CÓDIGO !!!! */
 // const songs = document.querySelector("audio");
 // songs.volume = 0.2;
 
+import { setGame } from "./modules/pong.js";
+
 const healthBar = document.getElementById("health");
 const hungerBar = document.getElementById("hunger");
 const funBar = document.getElementById("fun");
@@ -66,3 +68,14 @@ function decreaseLife() {
 setInterval(decreaseLife, healthInterval);
 
 decreaseLife();
+
+const pongButton = document.querySelector(".minigame-pong");
+const pongGame = document.getElementById("pong");
+const closeButton = document.getElementById("close-button");
+pongButton.addEventListener("click", () => {
+  pongGame.style.zIndex = 999;
+  setGame();
+});
+closeButton.addEventListener("click", () => {
+  pongGame.style.zIndex = -999;
+});

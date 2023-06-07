@@ -167,3 +167,30 @@ body {
   height: 70%;
   margin-bottom: 17%;
 }
+
+canvas {
+  border: solid 1px #fff;
+  border-left: none;
+  border-right: none;
+  image-rendering: pixelated;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -999;
+  cursor: cell;
+}
+
+.minigame-pong {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+}
+
+#close-button {
+  width: 10px;
+  color: #fff;
+  cursor: pointer;
+}
