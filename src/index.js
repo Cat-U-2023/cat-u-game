@@ -83,29 +83,29 @@ const catImage = document.querySelector(".cat");
 
 function changeStatus() {
   if (hunger <= 70) {
-    catImage.src = "img/img-status-cat/Cat-U-Hambriento.png";
+    catImage.src = "img/img-status-cat/cat-hambre.png";
   }
   if (fun <= 50) {
-    catImage.src = "img/img-status-cat/Cat-U-Enfadado.png";
+    catImage.src = "img/img-status-cat/cat-enfadado.png";
   }
   if (clean <= 40) {
-    catImage.src = "img/img-status-cat/Cat-U-Sucio.png";
+    catImage.src = "img/img-status-cat/cat-sucio.png";
   }
   if (hunger <= 50 && fun <= 50) {
-    catImage.src = "img/img-status-cat/cat-hambre-enfadado.png";
+    catImage.src = "img/img-status-cat/cat-enfadado-hambre.png";
   }
   if (hunger <= 40 && clean <= 40) {
     catImage.src = "img/img-status-cat/cat-hambre-sucio.png";
   }
   if (clean <= 40 && fun <= 50) {
-    catImage.src = "img/img-status-cat/cat-sucio-enfadado.png";
+    catImage.src = "img/img-status-cat/cat-enfadado-sucio.png";
     if (hunger <= 5 && fun <= 5 && clean <= 5) {
-      catImage.src = "img/img-status-cat/cat-bajavida.png";
+      catImage.src = "img/img-status-cat/cat-pocasalud.png";
     }
   } else if (hunger > 70 &&
              fun > 50 &&
              clean > 40) {
-    catImage.src = "img/img-status-cat/Cat-U-Normal.png";
+    catImage.src = "img/img-status-cat/cat-normal.png";
   }
 }
 
