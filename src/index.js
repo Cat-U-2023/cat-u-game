@@ -90,6 +90,18 @@ function changeStatus() {
   }
   if (clean <= 40) {
     catImage.src = "img/img-status-cat/Cat-U-Sucio.png";
+  }
+  if (hunger <= 50 && fun <= 50) {
+    catImage.src = "img/img-status-cat/cat-hambre-enfadado.png";
+  }
+  if (hunger <= 40 && clean <= 40) {
+    catImage.src = "img/img-status-cat/cat-hambre-sucio.png";
+  }
+  if (clean <= 40 && fun <= 50) {
+    catImage.src = "img/img-status-cat/cat-sucio-enfadado.png";
+    if (hunger <= 5 && fun <= 5 && clean <= 5) {
+      catImage.src = "img/img-status-cat/cat-bajavida.png";
+    }
   } else if (hunger > 70 &&
              fun > 50 &&
              clean > 40) {
