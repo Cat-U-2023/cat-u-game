@@ -92,7 +92,7 @@ function changeStatus() {
     catImage.src = "img/img-status-cat/cat-sucio.png";
   }
   if (hunger <= 50 && fun <= 50) {
-    catImage.src = "img/img-status-cat/cat-enfadado-hambre.png";
+    catImage.src = "img/img-status-cat/cat-enfado-hambre.png";
   }
   if (hunger <= 40 && clean <= 40) {
     catImage.src = "img/img-status-cat/cat-hambre-sucio.png";
