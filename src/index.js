@@ -115,9 +115,9 @@ const buttonSandBox = document.querySelector(".clean");
 
 function changeButton() {
   if (hunger <= 70) {
-    buttonFood.src = "img/img-bottons/Btn-food.png";
+    buttonFood.src = "img/img-barra/btn-food-empty.png";
   } else {
-    buttonFood.src = "img/img-bottons/btn-food-2.png";
+    buttonFood.src = "img/img-barra/btn-food-full.png";
   }
   if (fun <= 50) {
     buttonBall.src = "img/img-bottons/btn-fun-2.png";
