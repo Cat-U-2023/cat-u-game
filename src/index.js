@@ -34,10 +34,23 @@ function resetPoop() {
 };
 
 let totalBars;
-const hungerInterval = 2000;
-const funInterval = 4000;
-const cleanInterval = 5000;
+const hungerInterval = 200;
+const funInterval = 400;
+const cleanInterval = 500;
 const healthInterval = (hungerInterval + funInterval + cleanInterval) / 3;
+
+const pongButton = document.querySelector(".minigame-pong");
+const pongGame = document.getElementById("pong");
+const closeButton = document.getElementById("close-button");
+
+pongButton.addEventListener("click", () => {
+  pongGame.style.zIndex = 999;
+  setGame();
+});
+
+closeButton.addEventListener("click", () => {
+  pongGame.style.zIndex = -999;
+});
 
 function decreaseHunger() {
   hunger--;
@@ -68,14 +81,3 @@ function decreaseLife() {
 setInterval(decreaseLife, healthInterval);
 
 decreaseLife();
-
-const pongButton = document.querySelector(".minigame-pong");
-const pongGame = document.getElementById("pong");
-const closeButton = document.getElementById("close-button");
-pongButton.addEventListener("click", () => {
-  pongGame.style.zIndex = 999;
-  setGame();
-});
-closeButton.addEventListener("click", () => {
-  pongGame.style.zIndex = -999;
-});
