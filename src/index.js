@@ -4,6 +4,10 @@ EN HTML PORQUE ROMPE TODO EL CÓDIGO !!!! */
 // songs.volume = 0.2;
 
 import { setGame } from "./modules/pong.js";
+import { fixResize } from "./modules/fixFirefox.js";
+
+fixResize();
+window.addEventListener("resize", fixResize());
 
 const healthBar = document.getElementById("health");
 const hungerBar = document.getElementById("hunger");

@@ -36,12 +36,6 @@ body {
 }
 
 .container {
-  --r: calc(2560 / 1440);
-  --cv: clamp(0px, (100vw - 100vh * var(--r)) * 10000, 1vh);
-  --ch: clamp(0px, (100vh * var(--r) - 100vw) * 10000, 1vw);
-
-  height: calc((var(--cv) + var(--ch) / var(--r)) * 100);
-  width: calc((var(--ch) + var(--cv) * var(--r)) * 100);
   position: relative;
   z-index: 2;
 }
@@ -180,6 +174,7 @@ canvas {
   cursor: cell;
 }
 
+/* 
 .minigame-pong {
   width: 200px;
   height: 200px;
@@ -193,4 +188,4 @@ canvas {
   width: 10px;
   color: #fff;
   cursor: pointer;
-}
+} */
