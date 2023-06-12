@@ -113,6 +113,24 @@ const buttonFood = document.querySelector(".food");
 const buttonBall = document.querySelector(".game");
 const buttonSandBox = document.querySelector(".clean");
 
+function animationButtons() {
+  if (hunger <= 70 && hunger >= 69) {
+    buttonFood.classList.add("resize");
+  } else {
+    buttonFood.classList.remove("resize");
+  }
+  if (fun <= 50 && fun >= 49) {
+    buttonBall.classList.add("resize");
+  } else {
+    buttonBall.classList.remove("resize");
+  }
+  if (clean <= 40 && clean >= 39) {
+    buttonSandBox.classList.add("resize");
+  } else {
+    buttonSandBox.classList.remove("resize");
+  }
+}
+
 function changeButton() {
   if (hunger <= 70) {
     buttonFood.src = "img/img-barra/btn-food-empty.png";
@@ -139,6 +157,7 @@ function decreaseLife() {
   healthBar.style.width = totalBars + "%";
   changeStatus();
   changeButton();
+  animationButtons();
 }
 
 setInterval(decreaseLife, healthInterval);
