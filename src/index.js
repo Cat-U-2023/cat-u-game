@@ -119,12 +119,14 @@ function animationButtons() {
   } else {
     buttonFood.classList.remove("resize");
   }
-  if (fun <= 50 && fun >= 49) {
+  if (fun === 50) {
     buttonBall.classList.add("resize");
   } else {
     buttonBall.classList.remove("resize");
   }
-  if (clean <= 40 && clean >= 39) {
+  if (clean <= 65 && clean >= 64) {
+    buttonSandBox.classList.add("resize");
+  } else if (clean <= 40 && clean >= 39) {
     buttonSandBox.classList.add("resize");
   } else {
     buttonSandBox.classList.remove("resize");
@@ -133,16 +135,18 @@ function animationButtons() {
 
 function changeButton() {
   if (hunger <= 70) {
-    buttonFood.src = "img/img-barra/btn-food-empty.png";
+    buttonFood.src = "img/img-bottons/btn-food-empty.png";
   } else {
-    buttonFood.src = "img/img-barra/btn-food-full.png";
+    buttonFood.src = "img/img-bottons/btn-food-full.png";
   }
   if (fun <= 50) {
     buttonBall.src = "img/img-bottons/btn-fun-2.png";
   } else {
     buttonBall.src = "img/img-bottons/btn-fun.png";
   }
-  if (clean <= 40) {
+  if (clean <= 65 && clean >= 40) {
+    buttonSandBox.src = "img/img-bottons/Clean-2.webp";
+  } else if (clean <= 40) {
     buttonSandBox.src = "img/img-bottons/Clean-3.webp";
   } else {
     buttonSandBox.src = "img/img-bottons/Clean.webp";
