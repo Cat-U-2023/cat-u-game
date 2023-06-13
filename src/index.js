@@ -13,7 +13,7 @@ document.querySelector(".game").addEventListener("click", resetGame);
 document.querySelector(".clean").addEventListener("click", resetPoop);
 
 musicButton.addEventListener("click", toggleSound);
-songs.volume = 0.2;
+songs.volume = 0.1;
 function toggleSound() {
   if (count === 0) {
     count = 1;
@@ -118,6 +118,11 @@ const audioToy = document.querySelector(".sound-toy");
 const audioSandBox = document.querySelector(".sound-sand-box");
 const audioPurr = document.querySelector(".sound-purr");
 
+audioFood.volume = 0.4;
+audioToy.volume = 0.4;
+audioSandBox.volume = 0.4;
+audioPurr.volume = 0.4;
+
 buttonFood.addEventListener("click", () => {
   audioFood.play();
 });
@@ -131,7 +136,7 @@ buttonSandBox.addEventListener("click", () => {
 });
 
 buttonCat.addEventListener("click", () => {
-  audioPurr.play();
+  if (hunger > 70 && fun > 50 && clean > 40) { audioPurr.play(); }
 });
 
 function animationButtons() {

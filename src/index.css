@@ -28,7 +28,6 @@ body {
 }
 
 body {
-  overflow: hidden;
   background-color: black;
   max-width: 100vw;
   max-height: 100vh;
@@ -134,7 +133,7 @@ body {
 
 .cat {
   width: 65%;
-  padding-bottom: 15%;
+  margin-bottom: 15%;
 }
 
 .left {
@@ -153,7 +152,7 @@ body {
   background-attachment: fixed;
   width: 40%;
   height: 40%;
-  padding-bottom: 9%;
+  margin-bottom: 9%;
   margin-left: 5%;
   transition: 0.2s linear;
 }
@@ -257,7 +256,6 @@ a:hover {
 
 @media screen and (width < 450px) {
   .alert {
-    overflow: hidden;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -289,6 +287,10 @@ a:hover {
 }
 
 @media screen and (width >= 450px) {
+  body {
+    overflow: hidden;
+  }
+
   .alert {
     display: none;
   }
