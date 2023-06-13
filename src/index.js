@@ -136,7 +136,9 @@ buttonSandBox.addEventListener("click", () => {
 });
 
 buttonCat.addEventListener("click", () => {
-  if (hunger > 70 && fun > 50 && clean > 40) { audioPurr.play(); }
+  if (hunger > 70 && fun > 50 && clean > 40) {
+    audioPurr.play();
+  }
 });
 
 function animationButtons() {
