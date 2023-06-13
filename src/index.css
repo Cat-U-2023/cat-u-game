@@ -22,7 +22,8 @@ body {
 
 .food,
 .game,
-.clean {
+.clean,
+.cat {
   cursor: pointer;
 }
 

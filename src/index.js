@@ -112,6 +112,7 @@ function changeStatus() {
 const buttonFood = document.querySelector(".food");
 const buttonBall = document.querySelector(".game");
 const buttonSandBox = document.querySelector(".clean");
+const buttonCat = document.querySelector(".cat");
 const audioFood = document.querySelector(".sound-food");
 const audioToy = document.querySelector(".sound-toy");
 const audioSandBox = document.querySelector(".sound-sand-box");
