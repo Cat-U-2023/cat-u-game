@@ -112,6 +112,27 @@ function changeStatus() {
 const buttonFood = document.querySelector(".food");
 const buttonBall = document.querySelector(".game");
 const buttonSandBox = document.querySelector(".clean");
+const audioFood = document.querySelector(".sound-food");
+const audioToy = document.querySelector(".sound-toy");
+
+buttonFood.addEventListener("click", () => {
+  audioFood.play();
+});
+
+buttonBall.addEventListener("click", () => {
+  audioToy.play();
+});
+
+// // buttonFood.addEventListener("click", () => {
+// //   soundFood.src = "sounds/food-dispenser.mp3";
+// // });
+// // buttonBall.addEventListener("click", () => {
+
+// // });
+
+// // buttonSandBox.addEventListener("click", () => {
+
+// // });
 
 function animationButtons() {
   if (hunger <= 70 && hunger >= 69) {
