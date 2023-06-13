@@ -114,6 +114,8 @@ const buttonBall = document.querySelector(".game");
 const buttonSandBox = document.querySelector(".clean");
 const audioFood = document.querySelector(".sound-food");
 const audioToy = document.querySelector(".sound-toy");
+const audioSandBox = document.querySelector(".sound-sand-box");
+const audioPurr = document.querySelector(".sound-purr");
 
 buttonFood.addEventListener("click", () => {
   audioFood.play();
@@ -123,16 +125,13 @@ buttonBall.addEventListener("click", () => {
   audioToy.play();
 });
 
-// // buttonFood.addEventListener("click", () => {
-// //   soundFood.src = "sounds/food-dispenser.mp3";
-// // });
-// // buttonBall.addEventListener("click", () => {
+buttonSandBox.addEventListener("click", () => {
+  audioSandBox.play();
+});
 
-// // });
-
-// // buttonSandBox.addEventListener("click", () => {
-
-// // });
+buttonCat.addEventListener("click", () => {
+  audioPurr.play();
+});
 
 function animationButtons() {
   if (hunger <= 70 && hunger >= 69) {
