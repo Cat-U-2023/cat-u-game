@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap");
 
 html,
 body {
@@ -85,10 +86,10 @@ body {
 .bars-container {
   width: 76%;
   height: 100%;
-  margin-left: 1rem;
+  margin-left: 5%;
   margin-top: 5%;
   display: flex;
-  gap: 1rem;
+  gap: 8%;
   flex-direction: column;
 }
 
@@ -133,7 +134,7 @@ body {
 
 .cat {
   width: 65%;
-  margin-bottom: 15%;
+  margin-bottom: 21%;
 }
 
 .left {
@@ -152,7 +153,7 @@ body {
   background-attachment: fixed;
   width: 40%;
   height: 40%;
-  margin-bottom: 9%;
+  margin-bottom: 18%;
   margin-left: 5%;
   transition: 0.2s linear;
 }
@@ -175,7 +176,7 @@ body {
   background-attachment: fixed;
   width: 50%;
   height: 70%;
-  margin-bottom: 17%;
+  margin-bottom: 23.7%;
   transition: 0.2s linear;
 }
 
@@ -255,7 +256,12 @@ a:hover {
 }
 
 @media screen and (width < 450px) {
+  body {
+    background-color: #ffcd00;
+  }
+
   .alert {
+    width: 100%;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -266,23 +272,28 @@ a:hover {
     position: absolute;
     z-index: 1000;
     padding: 1rem;
-    height: 100vh;
+  }
+
+  .warning {
+    width: 80%;
   }
 
   .warning h1 {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .warning p {
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    font-family: "IBM Plex Mono", sans-serif;
   }
 
   .warning p:last-of-type {
     width: 100%;
     font-size: 0.85rem;
     text-align: end;
+    font-family: "Montserrat alternates", sans-serif;
   }
 }
 
