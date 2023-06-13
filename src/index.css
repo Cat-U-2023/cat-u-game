@@ -258,6 +258,7 @@ a:hover {
 @media screen and (width < 450px) {
   body {
     background-color: #ffcd00;
+    overflow-x: hidden;
   }
 
   .alert {
