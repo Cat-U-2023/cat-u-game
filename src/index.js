@@ -1,3 +1,5 @@
+import { setGame } from "./modules/pong.js";
+
 const songs = document.querySelector("audio");
 const musicButton = document.querySelector(".menu img");
 const healthBar = document.getElementById("health");
@@ -55,6 +57,26 @@ const hungerInterval = 1300;
 const funInterval = 1400;
 const cleanInterval = 1600;
 const healthInterval = (hungerInterval + funInterval + cleanInterval) / 3;
+
+
+
+const pongButton = document.querySelector(".minigame-pong");
+const pongGame = document.getElementById("pong");
+const closeButton = document.getElementById("close-game"); 
+
+/* JUEGO PING PONG
+pongButton.addEventListener("click", () => {
+  pongGame.style.zIndex = 999;
+  closeButton.style.zIndex= 1000;
+  setGame();
+});
+
+closeButton.addEventListener("click", () => {
+  pongGame.style.zIndex = -999;
+  closeButton.style.zIndex= -999;
+});
+*/
+
 
 function decreaseHunger() {
   hunger--;

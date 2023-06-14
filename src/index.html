@@ -17,6 +17,10 @@
     <div class="container">
       <div class="fit-size">
         <div class="background">
+          <div class="container-close-game">
+            <div id="close-game">X</div>
+          </div>
+          <canvas id="pong" width="900" height="600"></canvas>
           <div class="alert">
             <div class="warning">
               <h1>UPS... ALGO HA IDO MAL</h1>
@@ -26,7 +30,7 @@
                 CORRECTAMENTE EN ESTE DISPOSITIVO.
               </p>
               <p>
-                LE RECOMENDAMOS QUE PARA LA MEJOR EXPERIENCIA PRUEBE A ROTAR SU
+                LE RECOMENDAMOS QUE PARA UNA MEJOR EXPERIENCIA PRUEBE A ROTAR SU
                 PANTALLA O ACCEDER DESDE UN DISPOSITIVO CON MAYORES DIMENSIONES
                 COMO UNA TABLET O UN ORDENADOR.
               </p>
@@ -37,13 +41,16 @@
           <div class="window-notice" id="window-notice">
             <div class="content">
               <div class="content-text">
-                <h2 class="text-center">Bienvenido a Cat-U</h2>
+                <h1 class="text-center">Bienvenido a Cat-U</h1>
                 <p>
-                  Tendrás que darle de comer, limpiarlo y jugar con el michi
-                  para que sus barras no bajen a 0, sino...
+                  Tendrás que alimentar y limpiar a tu michi, pero no te olvides
+                  de jugar con él para que sus barras no bajen a cero, sino se
+                  pondrá triste 😞.
                 </p>
-                <h3 class="text-center">"GAME OVER"</h3>
-                <p>Podrás apagar la música picando en el icono del altavoz.</p>
+                <p>
+                  Podrás activar y desactivar la música haciendo click en el
+                  icono de la izquierda 🎵.
+                </p>
                 <div class="content-buttons">
                   <a id="close-button">Aceptar</a>
                 </div>
@@ -135,7 +142,7 @@
             <div class="right">
               <div class="right-top">
                 <img
-                  class="minijuegos-img"
+                  class="minijuegos-img minigame-pong"
                   draggable="false"
                   src="img/img-minijuegos/cuadro-gato-ojos-amarillos-fondo-negro_391229-2378.jpeg"
                   alt="imagen de minijuego"
