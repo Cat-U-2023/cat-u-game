@@ -167,9 +167,25 @@ body {
 }
 
 .right {
-  width: 30%;
+  width: 32%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  gap: 2rem;
+}
+
+/* img minijuegos */
+
+.right-top {
+  display: flex;
+  gap: 12%;
+  margin-bottom: 10%;
+  margin-right: 10%;
+}
+
+.minijuegos-img {
+  width: 45%;
+  height: 45%;
 }
 
 .clean {
@@ -178,6 +194,7 @@ body {
   height: 70%;
   margin-bottom: 23.7%;
   transition: 0.2s linear;
+  margin-left: 20%;
 }
 
 .window-notice {
