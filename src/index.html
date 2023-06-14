@@ -2,12 +2,12 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="página web de juego de tamagotchi de gato">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="página web de juego de tamagotchi de gato" />
   <title>Game - Cat-U</title>
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./index.css" />
   <script type="module" src="./index.js"></script>
 </head>
 
@@ -15,15 +15,42 @@
   <div class="container">
     <div class="fit-size">
       <div class="background">
+        <div class="container-close-game">
+          <div id="close-game">X</div>
+        </div>
+        <canvas id="pong" width="900" height="600"></canvas>
+        <div class="alert">
+          <div class="warning">
+            <h1>UPS... ALGO HA IDO MAL</h1>
+            <br />
+            <p>
+              LAMENTAMOS COMUNICARLE QUE CAT-U NO PUEDE VISUALIZARSE
+              CORRECTAMENTE EN ESTE DISPOSITIVO.
+            </p>
+            <p>
+              LE RECOMENDAMOS QUE PARA UNA MEJOR EXPERIENCIA PRUEBE A ROTAR SU
+              PANTALLA O ACCEDER DESDE UN DISPOSITIVO CON MAYORES DIMENSIONES
+              COMO UNA TABLET O UN ORDENADOR.
+            </p>
+            <br />
+            <p>- El Equipo de CAT-U.</p>
+          </div>
+        </div>
         <div class="window-notice" id="window-notice">
           <div class="content">
             <div class="content-text">
-              <h2 class="text-center">Bienvenido a Cat-U</h2>
-              <p>¡Cuida de nuestro Michi! Tendrás que darle de comer, limpiarlo y jugar con él para que sus barras no
-                bajen a 0, sino...
+
+              <h1 class="text-center">Bienvenido a Cat-U</h1>
+              <p>
+                Tendrás que alimentar y limpiar a tu michi, pero no te olvides
+                de jugar con él para que sus barras no bajen a cero, sino se
+                pondrá triste 😞.
               </p>
-              <h3 class="text-center">"GAME OVER"</h3>
-              <p>Podrás apagar la música picando en el icono del altavoz.</p>
+              <p>
+                Podrás activar y desactivar la música haciendo click en el
+                icono de la izquierda 🎵.
+
+              </p>
               <div class="content-buttons">
                 <a id="close-button">Aceptar</a>
               </div>
@@ -31,65 +58,66 @@
           </div>
         </div>
         <div class="up">
-
           <div class="menu">
-            <img src="img/img-bottons/Musica-Off.png" alt="logo musica off">
+            <img src="img/img-bottons/Musica-Off.png" alt="logo musica off" />
             <audio src="sounds/Rainbow Forest - Quincas Moreira.mp3" loop></audio>
           </div>
 
           <div class="status-container">
-
             <div class="bars-container">
-
               <div>
                 <img class="frames" draggable="false" src="img/img-barra/barra-salud-2.png"
-                  alt="frame de barra de salud">
-                <div class='bar' id='health'></div>
+                  alt="frame de barra de salud" />
+                <div class="bar" id="health"></div>
               </div>
 
               <div>
-                <img class="frames" draggable="false" src="img/img-barra/barra-food.png" alt="frame de barra de comida">
-                <div class='bar' id='hunger'></div>
+                <img class="frames" draggable="false" src="img/img-barra/barra-food.png"
+                  alt="frame de barra de comida" />
+                <div class="bar" id="hunger"></div>
               </div>
 
               <div>
                 <img class="frames" draggable="false" src="img/img-barra/barra-fun.png"
-                  alt="frame de barra de entretenimiento">
-                <div class='bar' id='fun'></div>
+                  alt="frame de barra de entretenimiento" />
+                <div class="bar" id="fun"></div>
               </div>
 
               <div>
                 <img class="frames" draggable="false" src="img/img-barra/barra-clean.png"
-                  alt="frame de barra de limpieza">
-                <div class='bar' id='clean'></div>
+                  alt="frame de barra de limpieza" />
+                <div class="bar" id="clean"></div>
               </div>
-
             </div>
-
           </div>
-
         </div>
 
         <div class="down">
-
           <div class="left">
-
-            <img class="food" draggable="false" src="img/img-bottons/btn-food-2.png"
-              alt="imagen de comedero automático comida de gato">
-            <img class="game" draggable="false" src="img/img-bottons/btn-fun.png" alt="imagen de pelota rosa y azul">
-
+            <img class="food" draggable="false" src="img/img-bottons/btn-food-full.png"
+              alt="imagen de comedero automático comida de gato" />
+            <audio class="sound-food" src="sounds/food-dispenser.mp3"></audio>
+            <img class="game" draggable="false" src="img/img-bottons/btn-fun.png" alt="imagen de pelota rosa y azul" />
+            <audio class="sound-toy" src="sounds/squeaky-toy.mp3"></audio>
           </div>
 
           <div class="center">
-            <img class="cat" draggable="false" src="img/img-status-cat/Cat-U-Normal.png" alt="Cat low health">
+            <img class="cat" draggable="false" src="img/img-status-cat/cat-normal.png" alt="imagen de gato" />
+            <audio class="sound-purr" src="sounds/catpurr.mp3"></audio>
           </div>
 
           <div class="right">
-
-            <img class="clean" draggable="false" src="img/img-bottons/Clean.webp" alt="imagen de arenero limpio">
-
+            <div class="right-top">
+              <img class="minijuegos-img minigame-pong" draggable="false" src="img/img-minijuegos/cat-pong-cuadro.jpg"
+                alt="imagen de minijuego" />
+              <img class="minijuegos-img" draggable="false" src="img/img-minijuegos/cat-jum-cuadro.jpg"
+                alt="imagen de minijuego" />
+            </div>
+            <div class="right-down">
+              <img class="clean" draggable="false" src="img/img-bottons/Clean.webp" alt="imagen de arenero" />
+              <audio class="sound-sand-box" src="sounds/sandbox.mp3"></audio>
+            </div>
           </div>
-
         </div>
       </div>
     </div>

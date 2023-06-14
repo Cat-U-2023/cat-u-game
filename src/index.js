@@ -1,3 +1,5 @@
+import { setGame } from "./modules/pong.js";
+
 const songs = document.querySelector("audio");
 const musicButton = document.querySelector(".menu img");
 const healthBar = document.getElementById("health");
@@ -13,7 +15,7 @@ document.querySelector(".game").addEventListener("click", resetGame);
 document.querySelector(".clean").addEventListener("click", resetPoop);
 
 musicButton.addEventListener("click", toggleSound);
-songs.volume = 0.2;
+songs.volume = 0.1;
 function toggleSound() {
   if (count === 0) {
     count = 1;
@@ -55,6 +57,26 @@ const hungerInterval = 1300;
 const funInterval = 1400;
 const cleanInterval = 1600;
 const healthInterval = (hungerInterval + funInterval + cleanInterval) / 3;
+
+
+
+const pongButton = document.querySelector(".minigame-pong");
+const pongGame = document.getElementById("pong");
+const closeButton = document.getElementById("close-game"); 
+
+/* JUEGO PING PONG
+pongButton.addEventListener("click", () => {
+  pongGame.style.zIndex = 999;
+  closeButton.style.zIndex= 1000;
+  setGame();
+});
+
+closeButton.addEventListener("click", () => {
+  pongGame.style.zIndex = -999;
+  closeButton.style.zIndex= -999;
+});
+*/
+
 
 function decreaseHunger() {
   hunger--;
@@ -112,19 +134,69 @@ function changeStatus() {
 const buttonFood = document.querySelector(".food");
 const buttonBall = document.querySelector(".game");
 const buttonSandBox = document.querySelector(".clean");
+const buttonCat = document.querySelector(".cat");
+const audioFood = document.querySelector(".sound-food");
+const audioToy = document.querySelector(".sound-toy");
+const audioSandBox = document.querySelector(".sound-sand-box");
+const audioPurr = document.querySelector(".sound-purr");
+
+audioFood.volume = 0.4;
+audioToy.volume = 0.4;
+audioSandBox.volume = 0.4;
+audioPurr.volume = 0.4;
+
+buttonFood.addEventListener("click", () => {
+  audioFood.play();
+});
+
+buttonBall.addEventListener("click", () => {
+  audioToy.play();
+});
+
+buttonSandBox.addEventListener("click", () => {
+  audioSandBox.play();
+});
+
+buttonCat.addEventListener("click", () => {
+  if (hunger > 70 && fun > 50 && clean > 40) {
+    audioPurr.play();
+  }
+});
+
+function animationButtons() {
+  if (hunger <= 70 && hunger >= 69) {
+    buttonFood.classList.add("resize");
+  } else {
+    buttonFood.classList.remove("resize");
+  }
+  if (fun === 50) {
+    buttonBall.classList.add("resize");
+  } else {
+    buttonBall.classList.remove("resize");
+  }
+  if (clean <= 65 && clean >= 64) {
+    buttonSandBox.classList.add("resize");
+  } else if (clean <= 40 && clean >= 39) {
+    buttonSandBox.classList.add("resize");
+  } else {
+    buttonSandBox.classList.remove("resize");
+  }
+}
 
 function changeButton() {
   if (hunger <= 70) {
-    buttonFood.src = "img/img-barra/btn-food-empty.png";
+    buttonFood.src = "img/img-bottons/btn-food-empty.png";
   } else {
-    buttonFood.src = "img/img-barra/btn-food-full.png";
+    buttonFood.src = "img/img-bottons/btn-food-full.png";
   }
   if (fun <= 50) {
     buttonBall.src = "img/img-bottons/btn-fun-2.png";
   } else {
     buttonBall.src = "img/img-bottons/btn-fun.png";
   }
-  if (clean <= 40) {
+  if (clean <= 65 && clean >= 40) {
+    buttonSandBox.src = "img/img-bottons/Clean-2.webp";
+  } else if (clean <= 40) {
     buttonSandBox.src = "img/img-bottons/Clean-3.webp";
   } else {
     buttonSandBox.src = "img/img-bottons/Clean.webp";
@@ -139,6 +211,7 @@ function decreaseLife() {
   healthBar.style.width = totalBars + "%";
   changeStatus();
   changeButton();
+  animationButtons();
 }
 
 setInterval(decreaseLife, healthInterval);
