@@ -30,18 +30,19 @@ body {
 
 body {
   background-color: black;
-  max-width: 100vw;
-  max-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .container {
   max-height: 100vh;
   max-width: 100%;
   aspect-ratio: 1.7;
-  position: relative;
+  position: absolute;
   z-index: 2;
 }
 
@@ -49,7 +50,7 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
 }
@@ -247,6 +248,7 @@ canvas {
   width: 60%;
   height: 100%;
   max-width: 50%;
+  aspect-ratio: 1.7;
 }
 
 .window-notice .content-text {
@@ -303,14 +305,24 @@ a:hover {
   transition: 0.2s linear;
 }
 
-@media screen and (width < 450px) {
+@media screen and (width <= 450px) {
   body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     background-color: #ffcd00;
     overflow-x: hidden;
   }
 
+  .container {
+    display: none;
+  }
+
   .alert {
     width: 100%;
+    height: 100vh;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -346,12 +358,109 @@ a:hover {
   }
 }
 
-@media screen and (width >= 450px) {
+@media screen and (450px < width <= 660px) {
   body {
     overflow: hidden;
   }
 
   .alert {
     display: none;
+    z-index: -999;
+  }
+
+  .window-notice .content {
+    background-size: 70%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .window-notice .content-text {
+    width: 60%;
+    font-size: 60%;
+  }
+
+  .window-notice a {
+    font-size: 170%;
+  }
+}
+
+@media screen and (660px < width <= 1000px) {
+  .window-notice .content {
+    background-size: 60%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .window-notice .content-text {
+    width: 50%;
+    font-size: 70%;
+  }
+
+  .window-notice a {
+    font-size: 160%;
+  }
+}
+
+@media screen and (100px < width <= 1500px) {
+  .window-notice .content {
+    background-size: 45vw;
+    width: 100%;
+  }
+
+  .window-notice .content-text {
+    width: 40vw;
+    font-size: 1.2vw;
+  }
+
+  .window-notice a {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (1500px < width <= 1900px) {
+  .window-notice .content {
+    background-size: 40rem;
+    width: 100%;
+  }
+
+  .window-notice .content-text {
+    width: 35rem;
+    font-size: 1rem;
+  }
+
+  .window-notice a {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (1900px < width <= 2500px) {
+  .window-notice .content {
+    background-size: 60rem;
+    width: 100%;
+  }
+
+  .window-notice .content-text {
+    width: 50rem;
+    font-size: 1.5rem;
+  }
+
+  .window-notice a {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (width > 2500px) {
+  .window-notice .content {
+    background-size: 60rem;
+    width: 100%;
+  }
+
+  .window-notice .content-text {
+    width: 50rem;
+    font-size: 1.5rem;
+  }
+
+  .window-notice a {
+    font-size: 2rem;
   }
 }
