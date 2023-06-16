@@ -58,11 +58,9 @@ const funInterval = 1400;
 const cleanInterval = 1600;
 const healthInterval = (hungerInterval + funInterval + cleanInterval) / 3;
 
-
-
 const pongButton = document.querySelector(".minigame-pong");
 const pongGame = document.getElementById("pong");
-const closeButton = document.getElementById("close-game"); 
+const closeButton = document.getElementById("close-game");
 
 /* JUEGO PING PONG
 pongButton.addEventListener("click", () => {
@@ -76,7 +74,6 @@ closeButton.addEventListener("click", () => {
   closeButton.style.zIndex= -999;
 });
 */
-
 
 function decreaseHunger() {
   hunger--;
@@ -165,18 +162,22 @@ buttonCat.addEventListener("click", () => {
 
 function animationButtons() {
   if (hunger <= 70 && hunger >= 69) {
+    buttonFood.src = "img/img-bottons/Glow/btn-food-empty-glow.png";
     buttonFood.classList.add("resize");
   } else {
     buttonFood.classList.remove("resize");
   }
-  if (fun === 50) {
+  if (fun <= 50 && fun >= 49) {
+    buttonBall.src = "img/img-bottons/Glow/btn-fun-2-glow.png";
     buttonBall.classList.add("resize");
   } else {
     buttonBall.classList.remove("resize");
   }
   if (clean <= 65 && clean >= 64) {
+    buttonSandBox.src = "img/img-bottons/Glow/Clean-2-glow.png";
     buttonSandBox.classList.add("resize");
   } else if (clean <= 40 && clean >= 39) {
+    buttonSandBox.src = "img/img-bottons/Glow/Clean-3-glow.png";
     buttonSandBox.classList.add("resize");
   } else {
     buttonSandBox.classList.remove("resize");
@@ -195,11 +196,11 @@ function changeButton() {
     buttonBall.src = "img/img-bottons/btn-fun.png";
   }
   if (clean <= 65 && clean >= 40) {
-    buttonSandBox.src = "img/img-bottons/Clean-2.webp";
+    buttonSandBox.src = "img/img-bottons/Clean-2.png";
   } else if (clean <= 40) {
-    buttonSandBox.src = "img/img-bottons/Clean-3.webp";
+    buttonSandBox.src = "img/img-bottons/Clean-3.png";
   } else {
-    buttonSandBox.src = "img/img-bottons/Clean.webp";
+    buttonSandBox.src = "img/img-bottons/Clean.png";
   }
 }
 
