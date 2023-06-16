@@ -53,6 +53,10 @@ export function setGame() {
     }
   }
 
+  const sound1 = document.querySelector(".sound1-pong");
+  const sound2 = document.querySelector(".sound2-pong");
+  sound1.volume = 0.2;
+  sound2.volume = 0.2;
   class Pong {
     constructor(canvas) {
       this._canvas = canvas;
@@ -123,14 +127,16 @@ export function setGame() {
         ball.vel.x = -ball.vel.x;
         ball.vel.y += 300 * (Math.random() - 0.5);
         ball.vel.len = len * 1.05;
+        const soundPong = [sound1, sound2];
+        soundPong[Math.ceil(Math.random() * 2) - 1].play();
       }
     }
 
     draw() {
-      this._context.fillStyle = "#000";
+      this._context.fillStyle = "#8f5cc3";
       this._context.fillRect(0, 0, this._canvas.width, this._canvas.height);
-      this._context.shadowColor = "green";
-      this._context.shadowBlur = 20;
+      this._context.shadowColor = "#000";
+      this._context.shadowBlur = 10;
 
       this.drawRect(this.ball);
       this.players.forEach(player => this.drawRect(player));
@@ -171,7 +177,7 @@ export function setGame() {
       if (this.ball.vel.x === 0 && this.ball.vel.y === 0) {
         this.ball.vel.x = 300 * (Math.random() > 0.5 ? 1 : -1);
         this.ball.vel.y = 300 * (Math.random() * 2 - 1);
-        this.ball.vel.len = 500;
+        this.ball.vel.len = 700;
       }
     }
 
@@ -195,7 +201,7 @@ export function setGame() {
   const canvas = document.getElementById("pong");
   const pong = new Pong(canvas);
 
-  canvas.addEventListener("mousemove", event => {
+  canvas.addEventListener("mousemove" || "touchmove", event => {
     const scale = event.offsetY / event.target.getBoundingClientRect().height;
     pong.players[0].pos.y = canvas.height * scale;
   });

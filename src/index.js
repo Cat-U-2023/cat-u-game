@@ -1,6 +1,5 @@
 import { setGame } from "./modules/pong.js";
-
-const songs = document.querySelector("audio");
+const songs = document.querySelector(".music");
 const musicButton = document.querySelector(".menu img");
 const healthBar = document.getElementById("health");
 const hungerBar = document.getElementById("hunger");
@@ -58,20 +57,23 @@ const funInterval = 1400;
 const cleanInterval = 1600;
 const healthInterval = (hungerInterval + funInterval + cleanInterval) / 3;
 
+/* PONG MINIGAME
+
 const pongButton = document.querySelector(".minigame-pong");
 const pongGame = document.getElementById("pong");
 const closeButton = document.getElementById("close-game");
 
-/* JUEGO PING PONG
 pongButton.addEventListener("click", () => {
+  pongGame.style.display = "block";
   pongGame.style.zIndex = 999;
-  closeButton.style.zIndex= 1000;
+  closeButton.style.zIndex = 1000;
   setGame();
 });
 
 closeButton.addEventListener("click", () => {
+  pongGame.style.display = "none";
   pongGame.style.zIndex = -999;
-  closeButton.style.zIndex= -999;
+  closeButton.style.zIndex = -999;
 });
 */
 
