@@ -215,7 +215,7 @@ canvas {
   justify-content: right;
 }
 
-#close-game {
+#close-game-pong {
   font-size: 4rem;
   cursor: pointer;
   color: #fff;
@@ -226,6 +226,176 @@ canvas {
   margin-top: 1%;
   margin-right: 1%;
   text-shadow: 2px 2px 2px #000;
+}
+
+/* minijuego cat-jump */
+#close-game-jump {
+  font-size: 4rem;
+  cursor: pointer;
+  color: #fff;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bold;
+  z-index: -999;
+  position: absolute;
+  margin-top: 1%;
+  margin-right: 1%;
+  text-shadow: 2px 2px 2px #000;
+}
+
+#cat-jump {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.container-sky {
+  width: 2560px;
+  height: 1440px;
+  margin: 0 auto;
+  position: relative;
+  background: url("img/img-minijuegos/cat-jump/bg-cat-jum.jpg");
+}
+
+.character {
+  width: 134px;
+  height: 194px;
+  position: absolute;
+  bottom: 194px;
+  left: 200px;
+  background: url("img/img-minijuegos/cat-jump/animation-catu-jump.png");
+  z-index: 310;
+}
+
+.cat-running {
+  animation: walk 0.5s steps(4) infinite;
+}
+
+.obstacle {
+  width: 176px;
+  height: 194px;
+  position: absolute;
+  bottom: 197px;
+  left: 250px;
+  background: url("img/img-minijuegos/cat-jump/Mummy-Cat-Jump.png");
+  background-repeat: no-repeat;
+  z-index: 400;
+
+  /* animation: animated-background 10s linear infinite; */
+}
+
+.obstacle-moving {
+  animation: animated-obstacle 4s linear infinite;
+}
+
+@keyframes animated-obstacle {
+  from {
+    left: 3500px;
+  }
+
+  to {
+    left: -200px;
+  }
+}
+
+.cat-jump {
+  animation-name: cat-jump;
+  animation-duration: 0.7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cat-jump {
+  0% {
+    bottom: 194px;
+  }
+
+  30% {
+    bottom: 330px;
+  }
+
+  50% {
+    bottom: 560px;
+  }
+
+  80% {
+    bottom: 330px;
+  }
+
+  100% {
+    bottom: 194px;
+  }
+}
+
+@keyframes walk {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: -538px;
+  }
+}
+
+.floor {
+  width: 2560px;
+  height: 1440px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: url("img/img-minijuegos/cat-jump/floor-cat-jump.png");
+  z-index: 300;
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+}
+
+@keyframes animated-floor {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 0;
+  }
+}
+
+.background-egypt {
+  width: 11016px;
+  height: 1440px;
+  bottom: 0;
+  left: 0;
+  background: url("img/img-minijuegos/cat-jump/bg-pyramid-cat-jump.png");
+  z-index: 100;
+  background-position: 0 0;
+  background-size: auto 100%;
+}
+
+@keyframes animated-background {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -11016px 0;
+  }
+}
+
+.score {
+  height: 130px;
+  width: 2560px;
+  color: #d48872;
+  position: absolute;
+  bottom: 1300px;
+  font-family: "Montserrat alternates", sans-serif;
+  font-size: 130px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.game-over {
+  position: absolute;
+  bottom: 1300px;
+  font-size: 100px;
 }
 
 /* img minijuegos */

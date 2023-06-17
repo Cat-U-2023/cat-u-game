@@ -1,4 +1,5 @@
 import { setGame } from "./modules/pong.js";
+import { catJump } from "./modules/cat-jump.js";
 const songs = document.querySelector(".music");
 const musicButton = document.querySelector(".menu img");
 const healthBar = document.getElementById("health");
@@ -59,19 +60,35 @@ const healthInterval = (hungerInterval + funInterval + cleanInterval) / 3;
 
 const pongButton = document.querySelector(".minigame-pong");
 const pongGame = document.getElementById("pong");
-const closeButton = document.getElementById("close-game");
+const closePong = document.getElementById("close-game-pong");
+const jumpButton = document.querySelector(".minigame-jump");
+const catJumpGame = document.getElementById("cat-jump");
+const closeJump = document.getElementById("close-game-jump");
 
 pongButton.addEventListener("click", () => {
   pongGame.style.display = "block";
   pongGame.style.zIndex = 999;
-  closeButton.style.zIndex = 1000;
+  closePong.style.zIndex = 1000;
   setGame();
 });
 
-closeButton.addEventListener("click", () => {
+closePong.addEventListener("click", () => {
   pongGame.style.display = "none";
   pongGame.style.zIndex = -999;
-  closeButton.style.zIndex = -999;
+  closePong.style.zIndex = -999;
+});
+
+jumpButton.addEventListener("click", () => {
+  catJumpGame.style.display = "block";
+  catJumpGame.style.zIndex = 999;
+  closeJump.style.zIndex = 1000;
+  catJump();
+});
+
+closeJump.addEventListener("click", () => {
+  catJumpGame.style.display = "none";
+  catJumpGame.style.zIndex = -999;
+  closeJump.style.zIndex = -999;
 });
 
 function decreaseHunger() {
