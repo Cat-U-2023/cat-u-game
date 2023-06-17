@@ -216,13 +216,16 @@ canvas {
 }
 
 #close-game {
-  font-size: 250%;
+  font-size: 4rem;
   cursor: pointer;
   color: #fff;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bold;
   z-index: -999;
   position: absolute;
   margin-top: 1%;
   margin-right: 1%;
+  text-shadow: 2px 2px 2px #000;
 }
 
 /* img minijuegos */
@@ -406,6 +409,10 @@ a:hover {
   .window-notice .content {
     background-size: 45vw;
     width: 100%;
+  }
+
+  #close-game {
+    font-size: 2rem;
   }
 
   .window-notice .content-text {

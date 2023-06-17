@@ -55,8 +55,8 @@ export function setGame() {
 
   const sound1 = document.querySelector(".sound1-pong");
   const sound2 = document.querySelector(".sound2-pong");
-  sound1.volume = 0.2;
-  sound2.volume = 0.2;
+  sound1.volume = 0.4;
+  sound2.volume = 0.4;
   class Pong {
     constructor(canvas) {
       this._canvas = canvas;
