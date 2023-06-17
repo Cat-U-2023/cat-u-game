@@ -57,8 +57,6 @@ const funInterval = 1400;
 const cleanInterval = 1600;
 const healthInterval = (hungerInterval + funInterval + cleanInterval) / 3;
 
-/* PONG MINIGAME
-
 const pongButton = document.querySelector(".minigame-pong");
 const pongGame = document.getElementById("pong");
 const closeButton = document.getElementById("close-game");
@@ -75,7 +73,6 @@ closeButton.addEventListener("click", () => {
   pongGame.style.zIndex = -999;
   closeButton.style.zIndex = -999;
 });
-*/
 
 function decreaseHunger() {
   hunger--;
