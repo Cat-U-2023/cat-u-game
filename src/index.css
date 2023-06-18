@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 html,
 body {
@@ -252,22 +253,21 @@ body {
   z-index: -999;
   height: 100%;
   width: 100%;
-  aspect-ratio: 1.7;
   cursor: cell;
 }
 
 .container-sky {
   width: 100%;
   height: 100%;
-  aspect-ratio: 1.7;
   margin: 0 auto;
   position: relative;
   z-index: -999;
   background: url("img/img-minijuegos/cat-jump/bg-cat-jump.jpg") no-repeat;
+  background-size: 100%;
 }
 
 .character {
-  width: 11.1%;
+  width: 11.02%;
   height: 27.2%;
   position: absolute;
   bottom: 11%;
@@ -289,6 +289,7 @@ body {
   bottom: 11%;
   left: 2000px;
   background: url("img/img-minijuegos/cat-jump/Mummy-Cat-Jump.png") no-repeat;
+  background-size: 100%;
   z-index: -999;
 }
 
@@ -389,23 +390,30 @@ body {
   }
 }
 
+.text-container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
 .score {
-  height: 130px;
-  width: 2560px;
   color: #d48872;
   position: absolute;
   z-index: -999;
-  bottom: 1300px;
   font-family: "Montserrat alternates", sans-serif;
-  font-size: 130px;
+  font-size: 380%;
   font-weight: bold;
-  text-align: center;
 }
 
 .game-over {
+  display: none;
   position: absolute;
-  bottom: 1300px;
-  font-size: 100px;
+  margin-top: 20%;
+  font-family: "Press Start 2P", fantasy;
+  font-size: 200%;
   z-index: -999;
 }
 
@@ -553,7 +561,8 @@ a:hover {
     z-index: -999;
   }
 
-  #close-game-pong {
+  #close-game-pong,
+  #close-game-jump {
     font-size: 1rem;
   }
 
@@ -580,7 +589,8 @@ a:hover {
     max-width: 100%;
   }
 
-  #close-game-pong {
+  #close-game-pong,
+  #close-game-jump {
     font-size: 1rem;
   }
 
@@ -600,7 +610,8 @@ a:hover {
     width: 100%;
   }
 
-  #close-game-pong {
+  #close-game-pong,
+  #close-game-jump {
     font-size: 1.5rem;
   }
 
