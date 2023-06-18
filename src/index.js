@@ -64,6 +64,12 @@ const closePong = document.getElementById("close-game-pong");
 const jumpButton = document.querySelector(".minigame-jump");
 const catJumpGame = document.getElementById("cat-jump");
 const closeJump = document.getElementById("close-game-jump");
+const character = document.querySelector(".character");
+const obstacle = document.querySelector(".obstacle");
+const floor = document.querySelector(".floor");
+const bg = document.querySelector(".background-egypt");
+const gameOver = document.querySelector(".game-over");
+const score = document.querySelector(".score");
 
 pongButton.addEventListener("click", () => {
   pongGame.style.display = "block";
@@ -80,8 +86,14 @@ closePong.addEventListener("click", () => {
 
 jumpButton.addEventListener("click", () => {
   catJumpGame.style.display = "block";
-  catJumpGame.style.zIndex = 999;
+  catJumpGame.style.zIndex = 100;
+  bg.style.zIndex = 100;
+  character.style.zIndex = 310;
+  floor.style.zIndex = 300;
+  obstacle.style.zIndex = 400;
   closeJump.style.zIndex = 1000;
+  gameOver.style.zIndex = 1000;
+  score.style.zIndex = 999;
   catJump();
 });
 
