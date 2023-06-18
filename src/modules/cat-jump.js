@@ -21,7 +21,7 @@ export function catJump() {
         playerScore++;
         score.innerHTML = `${playerScore}`;
       };
-      interval = setInterval(scoreCounter, 200);
+      interval = setInterval(scoreCounter, 400);
     }
   });
 
@@ -48,7 +48,7 @@ export function catJump() {
         mummy.classList.remove("obstacle-moving");
         bg.style.animation = "none";
         floor.style.animation = "none";
-        playerScore = 0;
+        playerScore = "none";
         clearInterval(interval);
       }
     }, 10);

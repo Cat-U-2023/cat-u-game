@@ -267,14 +267,14 @@ body {
 }
 
 .character {
-  width: 11.02%;
-  height: 27.2%;
+  width: 12.5%;
+  height: 31%;
   position: absolute;
   bottom: 11%;
   left: 15%;
   background: url("img/img-minijuegos/cat-jump/animation-catu-jump.png")
     no-repeat;
-  background-size: 400%;
+  background-size: cover;
   z-index: -999;
 }
 
@@ -316,23 +316,23 @@ body {
 
 @keyframes cat-jump {
   0% {
-    bottom: 194px;
+    bottom: 11%;
   }
 
   30% {
-    bottom: 330px;
+    bottom: 40%;
   }
 
   50% {
-    bottom: 560px;
+    bottom: 60%;
   }
 
   80% {
-    bottom: 330px;
+    bottom: 40%;
   }
 
   100% {
-    bottom: 194px;
+    bottom: 11%;
   }
 }
 
