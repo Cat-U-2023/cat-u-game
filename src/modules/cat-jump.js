@@ -48,7 +48,7 @@ export function catJump() {
         mummy.classList.remove("obstacle-moving");
         bg.style.animation = "none";
         floor.style.animation = "none";
-        playerScore = "none";
+        playerScore = 0;
         clearInterval(interval);
       }
     }, 10);

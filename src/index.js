@@ -165,10 +165,10 @@ const audioToy = document.querySelector(".sound-toy");
 const audioSandBox = document.querySelector(".sound-sand-box");
 const audioPurr = document.querySelector(".sound-purr");
 
-audioFood.volume = 0.5;
-audioToy.volume = 0.4;
-audioSandBox.volume = 0.5;
-audioPurr.volume = 0.5;
+audioFood.volume = 0.6;
+audioToy.volume = 0.5;
+audioSandBox.volume = 0.8;
+audioPurr.volume = 1;
 
 buttonFood.addEventListener("click", () => {
   audioFood.play();
