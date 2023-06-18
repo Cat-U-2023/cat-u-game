@@ -41,7 +41,7 @@ export function catJump() {
       const mummyLeft = parseInt(getComputedStyle(mummy).getPropertyValue("left"));
       const catBottom = parseInt(getComputedStyle(catPlayer).getPropertyValue("bottom"));
       // detect collision
-      if (mummyLeft <= 200 && mummyLeft >= 150 && catBottom <= 400) {
+      if (mummyLeft <= 160 && mummyLeft >= 140 && catBottom <= 150) {
         // collision
         gameOver.style.display = "block";
         catPlayer.classList.remove("cat-running");
@@ -55,3 +55,5 @@ export function catJump() {
   };
   endGame();
 }
+
+// explicacion como empezar a jugar y como jugar

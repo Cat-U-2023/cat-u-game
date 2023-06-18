@@ -287,23 +287,23 @@ body {
   height: 27.2%;
   position: absolute;
   bottom: 11%;
-  left: 2000px;
+  left: 87.5%;
   background: url("img/img-minijuegos/cat-jump/Mummy-Cat-Jump.png") no-repeat;
   background-size: 100%;
   z-index: -999;
 }
 
 .obstacle-moving {
-  animation: animated-obstacle 4s linear infinite;
+  animation: animated-obstacle 1.5s linear infinite;
 }
 
 @keyframes animated-obstacle {
   from {
-    left: 3500px;
+    left: 88%;
   }
 
   to {
-    left: -200px;
+    left: -2%;
   }
 }
 
