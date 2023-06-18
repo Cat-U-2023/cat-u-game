@@ -15,7 +15,7 @@ document.querySelector(".game").addEventListener("click", resetGame);
 document.querySelector(".clean").addEventListener("click", resetPoop);
 
 musicButton.addEventListener("click", toggleSound);
-songs.volume = 0.2;
+songs.volume = 0.8;
 function toggleSound() {
   if (count === 0) {
     count = 1;
@@ -164,11 +164,6 @@ const audioFood = document.querySelector(".sound-food");
 const audioToy = document.querySelector(".sound-toy");
 const audioSandBox = document.querySelector(".sound-sand-box");
 const audioPurr = document.querySelector(".sound-purr");
-
-audioFood.volume = 0.6;
-audioToy.volume = 0.5;
-audioSandBox.volume = 0.8;
-audioPurr.volume = 1;
 
 buttonFood.addEventListener("click", () => {
   audioFood.play();
