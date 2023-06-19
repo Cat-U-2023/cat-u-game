@@ -1,6 +1,6 @@
 import { setGame } from "./modules/pong.js";
-
-const songs = document.querySelector("audio");
+import { catJump } from "./modules/cat-jump.js";
+const songs = document.querySelector(".music");
 const musicButton = document.querySelector(".menu img");
 const healthBar = document.getElementById("health");
 const hungerBar = document.getElementById("hunger");
@@ -15,7 +15,7 @@ document.querySelector(".game").addEventListener("click", resetGame);
 document.querySelector(".clean").addEventListener("click", resetPoop);
 
 musicButton.addEventListener("click", toggleSound);
-songs.volume = 0.1;
+songs.volume = 0.8;
 function toggleSound() {
   if (count === 0) {
     count = 1;
@@ -60,20 +60,46 @@ const healthInterval = (hungerInterval + funInterval + cleanInterval) / 3;
 
 const pongButton = document.querySelector(".minigame-pong");
 const pongGame = document.getElementById("pong");
-const closeButton = document.getElementById("close-game");
+const closePong = document.getElementById("close-game-pong");
+const jumpButton = document.querySelector(".minigame-jump");
+const catJumpGame = document.getElementById("cat-jump");
+const closeJump = document.getElementById("close-game-jump");
+const character = document.querySelector(".character");
+const obstacle = document.querySelector(".obstacle");
+const floor = document.querySelector(".floor");
+const bg = document.querySelector(".background-egypt");
+const gameOver = document.querySelector(".game-over");
 
-/* JUEGO PING PONG
 pongButton.addEventListener("click", () => {
+  pongGame.style.display = "block";
   pongGame.style.zIndex = 999;
-  closeButton.style.zIndex= 1000;
+  closePong.style.zIndex = 1000;
   setGame();
 });
 
-closeButton.addEventListener("click", () => {
+closePong.addEventListener("click", () => {
+  pongGame.style.display = "none";
   pongGame.style.zIndex = -999;
-  closeButton.style.zIndex= -999;
+  closePong.style.zIndex = -999;
 });
-*/
+
+jumpButton.addEventListener("click", () => {
+  catJumpGame.style.display = "block";
+  catJumpGame.style.zIndex = 100;
+  bg.style.zIndex = 100;
+  character.style.zIndex = 310;
+  floor.style.zIndex = 300;
+  obstacle.style.zIndex = 400;
+  closeJump.style.zIndex = 1000;
+  gameOver.style.zIndex = 1000;
+  catJump();
+});
+
+closeJump.addEventListener("click", () => {
+  catJumpGame.style.display = "none";
+  catJumpGame.style.zIndex = -999;
+  closeJump.style.zIndex = -999;
+});
 
 function decreaseHunger() {
   hunger--;
@@ -136,11 +162,6 @@ const audioFood = document.querySelector(".sound-food");
 const audioToy = document.querySelector(".sound-toy");
 const audioSandBox = document.querySelector(".sound-sand-box");
 const audioPurr = document.querySelector(".sound-purr");
-
-audioFood.volume = 0.4;
-audioToy.volume = 0.4;
-audioSandBox.volume = 0.4;
-audioPurr.volume = 0.4;
 
 buttonFood.addEventListener("click", () => {
   audioFood.play();

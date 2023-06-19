@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 html,
 body {
@@ -17,7 +18,11 @@ body {
 .cat,
 .food,
 .clean,
-.game {
+.game,
+.warning,
+p,
+h1,
+a {
   user-select: none;
 }
 
@@ -200,7 +205,7 @@ body {
   cursor: pointer;
 }
 
-canvas {
+#pong {
   image-rendering: pixelated;
   height: 100%;
   width: 100%;
@@ -215,14 +220,192 @@ canvas {
   justify-content: right;
 }
 
-#close-game {
-  font-size: 250%;
+#close-game-pong {
+  font-size: 4rem;
   cursor: pointer;
   color: #fff;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bold;
   z-index: -999;
   position: absolute;
   margin-top: 1%;
   margin-right: 1%;
+  text-shadow: 2px 2px 2px #000;
+}
+
+#close-game-jump {
+  font-size: 4rem;
+  cursor: pointer;
+  color: #fff;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bold;
+  z-index: -999;
+  position: absolute;
+  margin-top: 1%;
+  margin-right: 1%;
+  text-shadow: 2px 2px 2px #000;
+}
+
+/* minijuego cat-jump */
+#cat-jump {
+  display: none;
+  position: absolute;
+  z-index: -999;
+  height: 100%;
+  width: 100%;
+  cursor: cell;
+}
+
+.container-sky {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: -999;
+  background: url("img/img-minijuegos/cat-jump/bg-cat-jump.jpg") no-repeat;
+  background-size: 100%;
+}
+
+.character {
+  width: 12.5%;
+  height: 31%;
+  position: absolute;
+  bottom: 11%;
+  left: 15%;
+  background: url("img/img-minijuegos/cat-jump/animation-catu-jump.png")
+    no-repeat;
+  background-size: cover;
+  z-index: -999;
+}
+
+.cat-running {
+  animation: walk 0.5s steps(4) infinite;
+}
+
+.obstacle {
+  width: 13.5%;
+  height: 27.2%;
+  position: absolute;
+  bottom: 11%;
+  left: 87.5%;
+  background: url("img/img-minijuegos/cat-jump/Mummy-Cat-Jump.png") no-repeat;
+  background-size: 100%;
+  z-index: -999;
+}
+
+.obstacle-moving {
+  animation: animated-obstacle 1.5s linear infinite;
+}
+
+@keyframes animated-obstacle {
+  from {
+    left: 88%;
+  }
+
+  to {
+    left: -2%;
+  }
+}
+
+.cat-jump {
+  animation-name: cat-jump;
+  animation-duration: 0.7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cat-jump {
+  0% {
+    bottom: 11%;
+  }
+
+  30% {
+    bottom: 40%;
+  }
+
+  50% {
+    bottom: 65%;
+  }
+
+  80% {
+    bottom: 40%;
+  }
+
+  100% {
+    bottom: 11%;
+  }
+}
+
+@keyframes walk {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: 132.4%;
+  }
+}
+
+.floor {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: url("img/img-minijuegos/cat-jump/floor-cat-jump.png");
+  z-index: -999;
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+}
+
+@keyframes animated-floor {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 0;
+  }
+}
+
+.background-egypt {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background: url("img/img-minijuegos/cat-jump/bg-pyramid-cat-jump.png");
+  z-index: -999;
+  background-position: 0 0;
+  background-size: auto 100%;
+}
+
+@keyframes animated-background {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -11016px 0;
+  }
+}
+
+.text-container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.game-over {
+  display: none;
+  position: absolute;
+  margin-top: 20%;
+  font-family: "Press Start 2P", fantasy;
+  font-size: 200%;
+  z-index: -999;
 }
 
 /* img minijuegos */
@@ -369,6 +552,11 @@ a:hover {
     z-index: -999;
   }
 
+  #close-game-pong,
+  #close-game-jump {
+    font-size: 1rem;
+  }
+
   .window-notice .content {
     background-size: 70%;
     width: 100%;
@@ -392,6 +580,11 @@ a:hover {
     max-width: 100%;
   }
 
+  #close-game-pong,
+  #close-game-jump {
+    font-size: 1rem;
+  }
+
   .window-notice .content-text {
     width: 50%;
     font-size: 70%;
@@ -402,10 +595,15 @@ a:hover {
   }
 }
 
-@media screen and (100px < width <= 1500px) {
+@media screen and (1000px < width <= 1500px) {
   .window-notice .content {
     background-size: 45vw;
     width: 100%;
+  }
+
+  #close-game-pong,
+  #close-game-jump {
+    font-size: 1.5rem;
   }
 
   .window-notice .content-text {
