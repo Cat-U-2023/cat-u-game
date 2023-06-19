@@ -399,15 +399,6 @@ body {
   justify-content: center;
 }
 
-.score {
-  color: #d48872;
-  position: absolute;
-  z-index: -999;
-  font-family: "Montserrat alternates", sans-serif;
-  font-size: 380%;
-  font-weight: bold;
-}
-
 .game-over {
   display: none;
   position: absolute;
