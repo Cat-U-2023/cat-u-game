@@ -9,11 +9,12 @@
   <title>Game - Cat-U</title>
   
   
-  <script type="module" crossorigin src="/cat-u-game/index-90ba54fd.js"></script>
-  <link rel="stylesheet" href="/cat-u-game/index-7661901a.css">
+  <script type="module" crossorigin src="/cat-u-game/index-7fac6c86.js"></script>
+  <link rel="stylesheet" href="/cat-u-game/index-9fe328e2.css">
 </head>
 
 <body>
+
   <div class="alert">
     <div class="warning">
       <h1>UPS... ALGO HA IDO MAL</h1>
@@ -34,11 +35,27 @@
   <div class="container">
     <div class="fit-size">
       <div class="background">
-        <div class="container-close-game">
-          <div id="close-game">X</div>
+        <div id="cat-jump">
+          <div class="container-close-game">
+            <div id="close-game-jump">X</div>
+          </div>
+          <div class="container-sky">
+            <div class="text-container">
+              <div class="game-over">Game Over</div>
+            </div>
+            <div class="background-egypt"></div>
+            <div class="character"></div>
+            <div class="obstacle"></div>
+            <div class="floor"></div>
+          </div>
         </div>
-        <canvas id="pong" width="900" height="600"></canvas>
-
+        <div class="container-close-game">
+          <div id="close-game-pong">X</div>
+        </div>
+        <canvas id="pong" width="900" height="600">
+          <audio class="sound1-pong" src="sounds/pongsound1.mp3"></audio>
+          <audio class="sound2-pong" src="sounds/pongsound2.mp3"></audio>
+        </canvas>
         <div class="window-notice" id="window-notice">
           <div class="content">
             <div class="content-text">
@@ -63,7 +80,7 @@
         <div class="up">
           <div class="menu">
             <img src="img/img-bottons/Musica-Off.png" alt="logo musica off" />
-            <audio src="sounds/Rainbow Forest - Quincas Moreira.mp3" loop></audio>
+            <audio class="music" src=" sounds/Rainbow Forest - Quincas Moreira.mp3" loop></audio>
           </div>
 
           <div class="status-container">
@@ -113,7 +130,7 @@
             <div class="right-top">
               <img class="minijuegos-img minigame-pong" draggable="false" src="img/img-minijuegos/cat-pong-cuadro.jpg"
                 alt="imagen de minijuego" />
-              <img class="minijuegos-img" draggable="false" src="img/img-minijuegos/cat-jum-cuadro.jpg"
+              <img class="minijuegos-img minigame-jump" draggable="false" src="img/img-minijuegos/cat-jum-cuadro.jpg"
                 alt="imagen de minijuego" />
             </div>
             <div class="right-down">
