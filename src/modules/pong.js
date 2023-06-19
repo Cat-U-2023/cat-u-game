@@ -200,11 +200,14 @@ export function setGame() {
 
   const canvas = document.getElementById("pong");
   const pong = new Pong(canvas);
-  const eventList = ["mousemove", "touchmove"];
-  eventList.forEach(event => canvas.addEventListener(event, function () {
+  canvas.addEventListener("mousemove", event => {
     const scale = event.offsetY / event.target.getBoundingClientRect().height;
     pong.players[0].pos.y = canvas.height * scale;
-  }));
+  });
+  canvas.addEventListener("touchmove", event => {
+    const scale = event.offsetY / event.target.getBoundingClientRect().height;
+    pong.players[0].pos.y = canvas.height * scale;
+  });
   canvas.addEventListener("click", event => {
     pong.start();
   });
