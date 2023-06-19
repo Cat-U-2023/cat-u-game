@@ -31,9 +31,10 @@ export function catJump() {
       const mummyLeft = parseInt(getComputedStyle(mummy).getPropertyValue("left"));
       const catBottom = parseInt(getComputedStyle(catPlayer).getPropertyValue("bottom"));
       // detect collision
-      const catRight = (window.innerWidth * 15) / 100;
-      const catLimit = (window.innerHeight * 25) / 100;
-      if (mummyLeft <= catRight && catBottom <= catLimit) {
+      const catRight = (window.innerWidth * 16) / 100;
+      const catLeft = (window.innerWidth * 2) / 100;
+      const catLimit = (window.innerHeight * 15) / 100;
+      if (mummyLeft <= catRight && mummyLeft >= catLeft && catBottom <= catLimit) {
         // collision
         gameOver.style.display = "block";
         catPlayer.classList.remove("cat-running");
