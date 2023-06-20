@@ -21,6 +21,7 @@ export function catJump() {
         playerScore++;
         score.innerHTML = `${playerScore}`;
       };
+
       interval = setInterval(scoreCounter, 400);
     }
   });
@@ -41,7 +42,7 @@ export function catJump() {
       const mummyLeft = parseInt(getComputedStyle(mummy).getPropertyValue("left"));
       const catBottom = parseInt(getComputedStyle(catPlayer).getPropertyValue("bottom"));
       // detect collision
-      if (mummyLeft <= 160 && mummyLeft >= 140 && catBottom <= 150) {
+      if (mummyLeft <= 51 && mummyLeft >= 49 && catBottom <= 50) {
         // collision
         gameOver.style.display = "block";
         catPlayer.classList.remove("cat-running");
