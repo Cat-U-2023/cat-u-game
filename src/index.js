@@ -15,16 +15,16 @@ document.querySelector(".game").addEventListener("click", resetGame);
 document.querySelector(".clean").addEventListener("click", resetPoop);
 
 musicButton.addEventListener("click", toggleSound);
-songs.volume = 0.8;
+songs.volume = 0.6;
 function toggleSound() {
   if (count === 0) {
     count = 1;
     songs.play();
-    musicButton.src = "img/img-bottons/Musica-On.png";
+    musicButton.src = "img/img-bottons/musica-on.webp";
   } else {
     count = 0;
     songs.pause();
-    musicButton.src = "img/img-bottons/Musica-Off.png";
+    musicButton.src = "img/img-bottons/musica-off.webp";
   }
 }
 
@@ -128,27 +128,27 @@ const catImage = document.querySelector(".cat");
 
 function changeStatus() {
   if (hunger <= 70) {
-    catImage.src = "img/img-status-cat/cat-hambre.png";
+    catImage.src = "img/img-status-cat/cat-hambre.webp";
   }
   if (fun <= 50) {
-    catImage.src = "img/img-status-cat/cat-enfadado.png";
+    catImage.src = "img/img-status-cat/cat-enfadado.webp";
   }
   if (clean <= 40) {
-    catImage.src = "img/img-status-cat/cat-sucio.png";
+    catImage.src = "img/img-status-cat/cat-sucio.webp";
   }
   if (hunger <= 50 && fun <= 50) {
-    catImage.src = "img/img-status-cat/cat-enfado-hambre.png";
+    catImage.src = "img/img-status-cat/cat-enfado-hambre.webp";
   }
   if (hunger <= 40 && clean <= 40) {
-    catImage.src = "img/img-status-cat/cat-hambre-sucio.png";
+    catImage.src = "img/img-status-cat/cat-hambre-sucio.webp";
   }
   if (clean <= 40 && fun <= 50) {
-    catImage.src = "img/img-status-cat/cat-enfadado-sucio.png";
+    catImage.src = "img/img-status-cat/cat-enfadado-sucio.webp";
   }
   if (hunger > 70 && fun > 50 && clean > 40) {
-    catImage.src = "img/img-status-cat/cat-normal.png";
+    catImage.src = "img/img-status-cat/cat-normal.webp";
   } else if (hunger < 70 && fun < 50 && clean < 40) {
-    catImage.src = "img/img-status-cat/cat-pocasalud.png";
+    catImage.src = "img/img-status-cat/cat-pocasalud.webp";
   }
 }
 
@@ -183,22 +183,22 @@ buttonCat.addEventListener("click", () => {
 
 function animationButtons() {
   if (hunger <= 70 && hunger >= 69) {
-    buttonFood.src = "img/img-bottons/Glow/btn-food-empty-glow.png";
+    buttonFood.src = "img/img-bottons/Glow/btn-food-empty-glow.webp";
     buttonFood.classList.add("resize");
   } else {
     buttonFood.classList.remove("resize");
   }
   if (fun <= 50 && fun >= 49) {
-    buttonBall.src = "img/img-bottons/Glow/btn-fun-2-glow.png";
+    buttonBall.src = "img/img-bottons/Glow/btn-fun-2-glow.webp";
     buttonBall.classList.add("resize");
   } else {
     buttonBall.classList.remove("resize");
   }
   if (clean <= 65 && clean >= 64) {
-    buttonSandBox.src = "img/img-bottons/Glow/Clean-2-glow.png";
+    buttonSandBox.src = "img/img-bottons/Glow/clean-2-glow.webp";
     buttonSandBox.classList.add("resize");
   } else if (clean <= 40 && clean >= 39) {
-    buttonSandBox.src = "img/img-bottons/Glow/Clean-3-glow.png";
+    buttonSandBox.src = "img/img-bottons/Glow/clean-3-glow.webp";
     buttonSandBox.classList.add("resize");
   } else {
     buttonSandBox.classList.remove("resize");
@@ -207,21 +207,21 @@ function animationButtons() {
 
 function changeButton() {
   if (hunger <= 70) {
-    buttonFood.src = "img/img-bottons/btn-food-empty.png";
+    buttonFood.src = "img/img-bottons/btn-food-empty.webp";
   } else {
-    buttonFood.src = "img/img-bottons/btn-food-full.png";
+    buttonFood.src = "img/img-bottons/btn-food-full.webp";
   }
   if (fun <= 50) {
-    buttonBall.src = "img/img-bottons/btn-fun-2.png";
+    buttonBall.src = "img/img-bottons/btn-fun-2.webp";
   } else {
-    buttonBall.src = "img/img-bottons/btn-fun.png";
+    buttonBall.src = "img/img-bottons/btn-fun.webp";
   }
   if (clean <= 65 && clean >= 40) {
-    buttonSandBox.src = "img/img-bottons/Clean-2.png";
+    buttonSandBox.src = "img/img-bottons/clean-2.webp";
   } else if (clean <= 40) {
-    buttonSandBox.src = "img/img-bottons/Clean-3.png";
+    buttonSandBox.src = "img/img-bottons/clean-3.webp";
   } else {
-    buttonSandBox.src = "img/img-bottons/Clean.png";
+    buttonSandBox.src = "img/img-bottons/clean.webp";
   }
 }
 

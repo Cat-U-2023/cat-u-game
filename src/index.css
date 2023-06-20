@@ -22,14 +22,15 @@ body {
 .warning,
 p,
 h1,
-a {
+button {
   user-select: none;
 }
 
 .food,
 .game,
 .clean,
-.cat {
+.cat,
+button {
   cursor: pointer;
 }
 
@@ -262,7 +263,7 @@ body {
   margin: 0 auto;
   position: relative;
   z-index: -999;
-  background: url("img/img-minijuegos/cat-jump/bg-cat-jump.jpg") no-repeat;
+  background: url("img/img-minijuegos/cat-jump/bg-cat-jump.webp") no-repeat;
   background-size: 100%;
 }
 
@@ -272,7 +273,7 @@ body {
   position: absolute;
   bottom: 11%;
   left: 15%;
-  background: url("img/img-minijuegos/cat-jump/animation-catu-jump.png")
+  background: url("img/img-minijuegos/cat-jump/animation-catu-jump.webp")
     no-repeat;
   background-size: cover;
   z-index: -999;
@@ -288,7 +289,7 @@ body {
   position: absolute;
   bottom: 11%;
   left: 87.5%;
-  background: url("img/img-minijuegos/cat-jump/Mummy-Cat-Jump.png") no-repeat;
+  background: url("img/img-minijuegos/cat-jump/Mummy-Cat-Jump.webp") no-repeat;
   background-size: 100%;
   z-index: -999;
 }
@@ -352,7 +353,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: url("img/img-minijuegos/cat-jump/floor-cat-jump.png");
+  background: url("img/img-minijuegos/cat-jump/floor-cat-jump.webp");
   z-index: -999;
   background-repeat: repeat;
   background-position: 0 0;
@@ -374,7 +375,7 @@ body {
   height: 100%;
   bottom: 0;
   left: 0;
-  background: url("img/img-minijuegos/cat-jump/bg-pyramid-cat-jump.png");
+  background: url("img/img-minijuegos/cat-jump/bg-pyramid-cat-jump.webp");
   z-index: -999;
   background-position: 0 0;
   background-size: auto 100%;
@@ -426,7 +427,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("/img/Fondo-Windows-Content.png") no-repeat;
+  background: url("/img/Fondo-Windows-Content.webp") no-repeat;
   background-position: center;
   background-size: 90%;
   width: 60%;
@@ -454,7 +455,6 @@ body {
   color: white;
   text-shadow: 1px 1px 1px #000;
   font-family: "Montserrat alternates", sans-serif;
-  cursor: pointer;
 }
 
 .content-text p {
@@ -470,16 +470,19 @@ body {
   font-family: "montserrat alternates", sans-serif;
 }
 
-a {
-  text-decoration: none;
+button {
+  border: none;
+  outline: none;
   color: white;
+  background-color: transparent;
+  font-family: "montserrat alternates", sans-serif;
   text-shadow: 2px 2px 1px #000;
   font-size: 1.5vw;
   transition: 0.5s ease;
   margin-top: 3%;
 }
 
-a:hover {
+button:hover {
   transform: scale(1.25);
   text-shadow: 1px 3px 3px #000;
 }
@@ -568,7 +571,7 @@ a:hover {
     font-size: 60%;
   }
 
-  .window-notice a {
+  .window-notice button {
     font-size: 170%;
   }
 }
@@ -590,7 +593,7 @@ a:hover {
     font-size: 70%;
   }
 
-  .window-notice a {
+  .window-notice button {
     font-size: 160%;
   }
 }
@@ -611,7 +614,7 @@ a:hover {
     font-size: 1.2vw;
   }
 
-  .window-notice a {
+  .window-notice button {
     font-size: 2.5vw;
   }
 }
@@ -627,7 +630,7 @@ a:hover {
     font-size: 1rem;
   }
 
-  .window-notice a {
+  .window-notice button {
     font-size: 2rem;
   }
 }
@@ -643,7 +646,7 @@ a:hover {
     font-size: 1.5rem;
   }
 
-  .window-notice a {
+  .window-notice button {
     font-size: 2rem;
   }
 }
@@ -659,7 +662,7 @@ a:hover {
     font-size: 1.5rem;
   }
 
-  .window-notice a {
+  .window-notice button {
     font-size: 2rem;
   }
 }
