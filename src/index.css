@@ -406,7 +406,13 @@ body {
   margin-top: 20%;
   font-family: "Press Start 2P", fantasy;
   font-size: 200%;
-  z-index: -999;
+}
+
+.gameplay-info {
+  position: absolute;
+  margin-top: 5%;
+  font-family: "Press Start 2P", fantasy;
+  font-size: 130%;
 }
 
 /* img minijuegos */
@@ -560,6 +566,14 @@ button:hover {
     font-size: 1rem;
   }
 
+  .game-over {
+    font-size: 150%;
+  }
+
+  .gameplay-info {
+    font-size: 100%;
+  }
+
   .window-notice .content {
     background-size: 70%;
     width: 100%;
@@ -588,6 +602,14 @@ button:hover {
     font-size: 1rem;
   }
 
+  .game-over {
+    font-size: 150%;
+  }
+
+  .gameplay-info {
+    font-size: 100%;
+  }
+
   .window-notice .content-text {
     width: 50%;
     font-size: 70%;
@@ -607,6 +629,14 @@ button:hover {
   #close-game-pong,
   #close-game-jump {
     font-size: 1.5rem;
+  }
+
+  .game-over {
+    font-size: 200%;
+  }
+
+  .gameplay-info {
+    font-size: 210%;
   }
 
   .window-notice .content-text {
@@ -630,6 +660,14 @@ button:hover {
     font-size: 1rem;
   }
 
+  .game-over {
+    font-size: 200%;
+  }
+
+  .gameplay-info {
+    font-size: 210%;
+  }
+
   .window-notice button {
     font-size: 2rem;
   }
@@ -646,6 +684,14 @@ button:hover {
     font-size: 1.5rem;
   }
 
+  .game-over {
+    font-size: 400%;
+  }
+
+  .gameplay-info {
+    font-size: 250%;
+  }
+
   .window-notice button {
     font-size: 2rem;
   }
@@ -660,6 +706,14 @@ button:hover {
   .window-notice .content-text {
     width: 50rem;
     font-size: 1.5rem;
+  }
+
+  .game-over {
+    font-size: 400%;
+  }
+
+  .gameplay-info {
+    font-size: 300%;
   }
 
   .window-notice button {

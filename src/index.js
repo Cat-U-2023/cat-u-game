@@ -68,7 +68,6 @@ const character = document.querySelector(".character");
 const obstacle = document.querySelector(".obstacle");
 const floor = document.querySelector(".floor");
 const bg = document.querySelector(".background-egypt");
-const gameOver = document.querySelector(".game-over");
 
 pongButton.addEventListener("click", () => {
   pongGame.style.display = "block";
@@ -91,7 +90,6 @@ jumpButton.addEventListener("click", () => {
   floor.style.zIndex = 300;
   obstacle.style.zIndex = 400;
   closeJump.style.zIndex = 1000;
-  gameOver.style.zIndex = 1000;
   catJump();
 });
 
