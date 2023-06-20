@@ -22,19 +22,20 @@ body {
 .warning,
 p,
 h1,
-a {
+button {
   user-select: none;
 }
 
 .food,
 .game,
 .clean,
-.cat {
+.cat,
+button {
   cursor: pointer;
 }
 
 body {
-  background-color: black;
+  background-color: #000;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -109,19 +110,19 @@ body {
 }
 
 #health {
-  background-color: crimson;
+  background-color: #dc143c;
 }
 
 #hunger {
-  background-color: rgb(255 204 0);
+  background-color: #fc0;
 }
 
 #fun {
-  background-color: rgb(79 227 53);
+  background-color: #4fe335;
 }
 
 #clean {
-  background-color: aquamarine;
+  background-color: #7fffd4;
 }
 
 .frames {
@@ -233,6 +234,24 @@ body {
   text-shadow: 2px 2px 2px #000;
 }
 
+.gameplay-pong {
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top: 10%;
+  font-family: "Press Start 2P", fantasy;
+  font-size: 250%;
+  z-index: -999;
+  text-shadow: 4px 3px 2px #000;
+}
+
+.gameplay-pong p {
+  margin: 5%;
+}
+
+/* minijuego cat-jump */
+
 #close-game-jump {
   font-size: 4rem;
   cursor: pointer;
@@ -246,7 +265,6 @@ body {
   text-shadow: 2px 2px 2px #000;
 }
 
-/* minijuego cat-jump */
 #cat-jump {
   display: none;
   position: absolute;
@@ -262,7 +280,7 @@ body {
   margin: 0 auto;
   position: relative;
   z-index: -999;
-  background: url("img/img-minijuegos/cat-jump/bg-cat-jump.jpg") no-repeat;
+  background: url("img/img-minijuegos/cat-jump/bg-cat-jump.webp") no-repeat;
   background-size: 100%;
 }
 
@@ -272,7 +290,7 @@ body {
   position: absolute;
   bottom: 11%;
   left: 15%;
-  background: url("img/img-minijuegos/cat-jump/animation-catu-jump.png")
+  background: url("img/img-minijuegos/cat-jump/animation-catu-jump.webp")
     no-repeat;
   background-size: cover;
   z-index: -999;
@@ -288,7 +306,7 @@ body {
   position: absolute;
   bottom: 11%;
   left: 87.5%;
-  background: url("img/img-minijuegos/cat-jump/Mummy-Cat-Jump.png") no-repeat;
+  background: url("img/img-minijuegos/cat-jump/Mummy-Cat-Jump.webp") no-repeat;
   background-size: 100%;
   z-index: -999;
 }
@@ -324,7 +342,7 @@ body {
   }
 
   50% {
-    bottom: 60%;
+    bottom: 65%;
   }
 
   80% {
@@ -352,7 +370,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: url("img/img-minijuegos/cat-jump/floor-cat-jump.png");
+  background: url("img/img-minijuegos/cat-jump/floor-cat-jump.webp");
   z-index: -999;
   background-repeat: repeat;
   background-position: 0 0;
@@ -374,7 +392,7 @@ body {
   height: 100%;
   bottom: 0;
   left: 0;
-  background: url("img/img-minijuegos/cat-jump/bg-pyramid-cat-jump.png");
+  background: url("img/img-minijuegos/cat-jump/bg-pyramid-cat-jump.webp");
   z-index: -999;
   background-position: 0 0;
   background-size: auto 100%;
@@ -399,22 +417,18 @@ body {
   justify-content: center;
 }
 
-.score {
-  color: #d48872;
-  position: absolute;
-  z-index: -999;
-  font-family: "Montserrat alternates", sans-serif;
-  font-size: 380%;
-  font-weight: bold;
-}
-
 .game-over {
   display: none;
   position: absolute;
   margin-top: 20%;
   font-family: "Press Start 2P", fantasy;
   font-size: 200%;
-  z-index: -999;
+}
+
+.gameplay-jump {
+  margin-top: 5%;
+  font-family: "Press Start 2P", fantasy;
+  font-size: 130%;
 }
 
 /* img minijuegos */
@@ -435,7 +449,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("/img/Fondo-Windows-Content.png") no-repeat;
+  background: url("/img/Fondo-Windows-Content.webp") no-repeat;
   background-position: center;
   background-size: 90%;
   width: 60%;
@@ -450,7 +464,7 @@ body {
   justify-content: center;
   width: 70%;
   height: 50%;
-  color: white;
+  color: #fff;
   text-shadow: 1px 1px 1px #000;
   font-family: "Montserrat alternates", sans-serif;
   background-attachment: fixed;
@@ -460,10 +474,9 @@ body {
 .window-notice .content-buttons {
   display: flex;
   justify-content: center;
-  color: white;
+  color: #fff;
   text-shadow: 1px 1px 1px #000;
   font-family: "Montserrat alternates", sans-serif;
-  cursor: pointer;
 }
 
 .content-text p {
@@ -474,21 +487,24 @@ body {
 .text-center {
   display: flex;
   justify-content: center;
-  color: white;
+  color: #fff;
   text-shadow: 2px 2px 2px #000;
   font-family: "montserrat alternates", sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: white;
+button {
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: transparent;
+  font-family: "montserrat alternates", sans-serif;
   text-shadow: 2px 2px 1px #000;
   font-size: 1.5vw;
   transition: 0.5s ease;
   margin-top: 3%;
 }
 
-a:hover {
+button:hover {
   transform: scale(1.25);
   text-shadow: 1px 3px 3px #000;
 }
@@ -566,6 +582,18 @@ a:hover {
     font-size: 1rem;
   }
 
+  .game-over {
+    font-size: 150%;
+  }
+
+  .gameplay-jump {
+    font-size: 100%;
+  }
+
+  .gameplay-pong {
+    font-size: 100%;
+  }
+
   .window-notice .content {
     background-size: 70%;
     width: 100%;
@@ -577,7 +605,7 @@ a:hover {
     font-size: 60%;
   }
 
-  .window-notice a {
+  .window-notice button {
     font-size: 170%;
   }
 }
@@ -594,12 +622,24 @@ a:hover {
     font-size: 1rem;
   }
 
+  .game-over {
+    font-size: 150%;
+  }
+
+  .gameplay-jump {
+    font-size: 100%;
+  }
+
+  .gameplay-pong {
+    font-size: 100%;
+  }
+
   .window-notice .content-text {
     width: 50%;
     font-size: 70%;
   }
 
-  .window-notice a {
+  .window-notice button {
     font-size: 160%;
   }
 }
@@ -615,12 +655,24 @@ a:hover {
     font-size: 1.5rem;
   }
 
+  .game-over {
+    font-size: 200%;
+  }
+
+  .gameplay-pong {
+    font-size: 200%;
+  }
+
+  .gameplay-jump {
+    font-size: 210%;
+  }
+
   .window-notice .content-text {
     width: 40vw;
     font-size: 1.2vw;
   }
 
-  .window-notice a {
+  .window-notice button {
     font-size: 2.5vw;
   }
 }
@@ -636,7 +688,15 @@ a:hover {
     font-size: 1rem;
   }
 
-  .window-notice a {
+  .game-over {
+    font-size: 200%;
+  }
+
+  .gameplay-jump {
+    font-size: 210%;
+  }
+
+  .window-notice button {
     font-size: 2rem;
   }
 }
@@ -652,7 +712,15 @@ a:hover {
     font-size: 1.5rem;
   }
 
-  .window-notice a {
+  .game-over {
+    font-size: 400%;
+  }
+
+  .gameplay-jump {
+    font-size: 250%;
+  }
+
+  .window-notice button {
     font-size: 2rem;
   }
 }
@@ -668,7 +736,15 @@ a:hover {
     font-size: 1.5rem;
   }
 
-  .window-notice a {
+  .game-over {
+    font-size: 400%;
+  }
+
+  .gameplay-jump {
+    font-size: 300%;
+  }
+
+  .window-notice button {
     font-size: 2rem;
   }
 }

@@ -20,11 +20,11 @@ function toggleSound() {
   if (count === 0) {
     count = 1;
     songs.play();
-    musicButton.src = "img/img-bottons/Musica-On.png";
+    musicButton.src = "img/img-bottons/musica-on.webp";
   } else {
     count = 0;
     songs.pause();
-    musicButton.src = "img/img-bottons/Musica-Off.png";
+    musicButton.src = "img/img-bottons/musica-off.webp";
   }
 }
 
@@ -68,13 +68,14 @@ const character = document.querySelector(".character");
 const obstacle = document.querySelector(".obstacle");
 const floor = document.querySelector(".floor");
 const bg = document.querySelector(".background-egypt");
-const gameOver = document.querySelector(".game-over");
-const score = document.querySelector(".score");
+const gameplayPong = document.querySelector(".gameplay-pong");
 
 pongButton.addEventListener("click", () => {
   pongGame.style.display = "block";
   pongGame.style.zIndex = 999;
-  closePong.style.zIndex = 1000;
+  closePong.style.zIndex = 1001;
+  gameplayPong.style.display = "block";
+  gameplayPong.style.zIndex = 1000;
   setGame();
 });
 
@@ -82,6 +83,8 @@ closePong.addEventListener("click", () => {
   pongGame.style.display = "none";
   pongGame.style.zIndex = -999;
   closePong.style.zIndex = -999;
+  gameplayPong.style.display = "none";
+  gameplayPong.style.zIndex = -999;
 });
 
 jumpButton.addEventListener("click", () => {
@@ -92,8 +95,6 @@ jumpButton.addEventListener("click", () => {
   floor.style.zIndex = 300;
   obstacle.style.zIndex = 400;
   closeJump.style.zIndex = 1000;
-  gameOver.style.zIndex = 1000;
-  score.style.zIndex = 999;
   catJump();
 });
 
@@ -130,27 +131,27 @@ const catImage = document.querySelector(".cat");
 
 function changeStatus() {
   if (hunger <= 70) {
-    catImage.src = "img/img-status-cat/cat-hambre.png";
+    catImage.src = "img/img-status-cat/cat-hambre.webp";
   }
   if (fun <= 50) {
-    catImage.src = "img/img-status-cat/cat-enfadado.png";
+    catImage.src = "img/img-status-cat/cat-enfadado.webp";
   }
   if (clean <= 40) {
-    catImage.src = "img/img-status-cat/cat-sucio.png";
+    catImage.src = "img/img-status-cat/cat-sucio.webp";
   }
   if (hunger <= 50 && fun <= 50) {
-    catImage.src = "img/img-status-cat/cat-enfado-hambre.png";
+    catImage.src = "img/img-status-cat/cat-enfado-hambre.webp";
   }
   if (hunger <= 40 && clean <= 40) {
-    catImage.src = "img/img-status-cat/cat-hambre-sucio.png";
+    catImage.src = "img/img-status-cat/cat-hambre-sucio.webp";
   }
   if (clean <= 40 && fun <= 50) {
-    catImage.src = "img/img-status-cat/cat-enfadado-sucio.png";
+    catImage.src = "img/img-status-cat/cat-enfadado-sucio.webp";
   }
   if (hunger > 70 && fun > 50 && clean > 40) {
-    catImage.src = "img/img-status-cat/cat-normal.png";
+    catImage.src = "img/img-status-cat/cat-normal.webp";
   } else if (hunger < 70 && fun < 50 && clean < 40) {
-    catImage.src = "img/img-status-cat/cat-pocasalud.png";
+    catImage.src = "img/img-status-cat/cat-pocasalud.webp";
   }
 }
 
@@ -164,11 +165,6 @@ const audioFood = document.querySelector(".sound-food");
 const audioToy = document.querySelector(".sound-toy");
 const audioSandBox = document.querySelector(".sound-sand-box");
 const audioPurr = document.querySelector(".sound-purr");
-
-audioFood.volume = 0.6;
-audioToy.volume = 0.5;
-audioSandBox.volume = 0.8;
-audioPurr.volume = 1;
 
 buttonFood.addEventListener("click", () => {
   audioFood.play();
@@ -190,22 +186,22 @@ buttonCat.addEventListener("click", () => {
 
 function animationButtons() {
   if (hunger <= 70 && hunger >= 69) {
-    buttonFood.src = "img/img-bottons/Glow/btn-food-empty-glow.png";
+    buttonFood.src = "img/img-bottons/Glow/btn-food-empty-glow.webp";
     buttonFood.classList.add("resize");
   } else {
     buttonFood.classList.remove("resize");
   }
   if (fun <= 50 && fun >= 49) {
-    buttonBall.src = "img/img-bottons/Glow/btn-fun-2-glow.png";
+    buttonBall.src = "img/img-bottons/Glow/btn-fun-2-glow.webp";
     buttonBall.classList.add("resize");
   } else {
     buttonBall.classList.remove("resize");
   }
   if (clean <= 65 && clean >= 64) {
-    buttonSandBox.src = "img/img-bottons/Glow/Clean-2-glow.png";
+    buttonSandBox.src = "img/img-bottons/Glow/clean-2-glow.webp";
     buttonSandBox.classList.add("resize");
   } else if (clean <= 40 && clean >= 39) {
-    buttonSandBox.src = "img/img-bottons/Glow/Clean-3-glow.png";
+    buttonSandBox.src = "img/img-bottons/Glow/clean-3-glow.webp";
     buttonSandBox.classList.add("resize");
   } else {
     buttonSandBox.classList.remove("resize");
@@ -214,21 +210,21 @@ function animationButtons() {
 
 function changeButton() {
   if (hunger <= 70) {
-    buttonFood.src = "img/img-bottons/btn-food-empty.png";
+    buttonFood.src = "img/img-bottons/btn-food-empty.webp";
   } else {
-    buttonFood.src = "img/img-bottons/btn-food-full.png";
+    buttonFood.src = "img/img-bottons/btn-food-full.webp";
   }
   if (fun <= 50) {
-    buttonBall.src = "img/img-bottons/btn-fun-2.png";
+    buttonBall.src = "img/img-bottons/btn-fun-2.webp";
   } else {
-    buttonBall.src = "img/img-bottons/btn-fun.png";
+    buttonBall.src = "img/img-bottons/btn-fun.webp";
   }
   if (clean <= 65 && clean >= 40) {
-    buttonSandBox.src = "img/img-bottons/Clean-2.png";
+    buttonSandBox.src = "img/img-bottons/clean-2.webp";
   } else if (clean <= 40) {
-    buttonSandBox.src = "img/img-bottons/Clean-3.png";
+    buttonSandBox.src = "img/img-bottons/clean-3.webp";
   } else {
-    buttonSandBox.src = "img/img-bottons/Clean.png";
+    buttonSandBox.src = "img/img-bottons/clean.webp";
   }
 }
 
