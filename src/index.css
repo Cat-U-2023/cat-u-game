@@ -22,14 +22,15 @@ body {
 .warning,
 p,
 h1,
-a {
+button {
   user-select: none;
 }
 
 .food,
 .game,
 .clean,
-.cat {
+.cat,
+button {
   cursor: pointer;
 }
 
@@ -454,7 +455,6 @@ body {
   color: white;
   text-shadow: 1px 1px 1px #000;
   font-family: "Montserrat alternates", sans-serif;
-  cursor: pointer;
 }
 
 .content-text p {
@@ -470,16 +470,19 @@ body {
   font-family: "montserrat alternates", sans-serif;
 }
 
-a {
-  text-decoration: none;
+button {
+  border: none;
+  outline: none;
   color: white;
+  background-color: transparent;
+  font-family: "montserrat alternates", sans-serif;
   text-shadow: 2px 2px 1px #000;
   font-size: 1.5vw;
   transition: 0.5s ease;
   margin-top: 3%;
 }
 
-a:hover {
+button:hover {
   transform: scale(1.25);
   text-shadow: 1px 3px 3px #000;
 }
@@ -568,7 +571,7 @@ a:hover {
     font-size: 60%;
   }
 
-  .window-notice a {
+  .window-notice button {
     font-size: 170%;
   }
 }
@@ -590,7 +593,7 @@ a:hover {
     font-size: 70%;
   }
 
-  .window-notice a {
+  .window-notice button {
     font-size: 160%;
   }
 }
@@ -611,7 +614,7 @@ a:hover {
     font-size: 1.2vw;
   }
 
-  .window-notice a {
+  .window-notice button {
     font-size: 2.5vw;
   }
 }
@@ -627,7 +630,7 @@ a:hover {
     font-size: 1rem;
   }
 
-  .window-notice a {
+  .window-notice button {
     font-size: 2rem;
   }
 }
@@ -643,7 +646,7 @@ a:hover {
     font-size: 1.5rem;
   }
 
-  .window-notice a {
+  .window-notice button {
     font-size: 2rem;
   }
 }
@@ -659,7 +662,7 @@ a:hover {
     font-size: 1.5rem;
   }
 
-  .window-notice a {
+  .window-notice button {
     font-size: 2rem;
   }
 }
