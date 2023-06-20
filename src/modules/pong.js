@@ -52,7 +52,7 @@ export function setGame() {
       this.score = 0;
     }
   }
-
+  const gameplayPong = document.querySelector(".gameplay-pong");
   const sound1 = document.querySelector(".sound1-pong");
   const sound2 = document.querySelector(".sound2-pong");
   sound1.volume = 0.4;
@@ -166,6 +166,7 @@ export function setGame() {
     }
 
     reset() {
+      gameplayPong.style.display = "block";
       this.ball.pos.x = this._canvas.width / 2;
       this.ball.pos.y = this._canvas.height / 2;
 
@@ -174,6 +175,7 @@ export function setGame() {
     }
 
     start() {
+      gameplayPong.style.display = "none";
       if (this.ball.vel.x === 0 && this.ball.vel.y === 0) {
         this.ball.vel.x = 300 * (Math.random() > 0.5 ? 1 : -1);
         this.ball.vel.y = 300 * (Math.random() * 2 - 1);

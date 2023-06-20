@@ -3,10 +3,12 @@ const mummy = document.querySelector(".obstacle");
 const floor = document.querySelector(".floor");
 const bg = document.querySelector(".background-egypt");
 const gameOver = document.querySelector(".game-over");
+const gameplayJump = document.querySelector(".gameplay-jump");
 
 export function catJump() {
   document.addEventListener("keydown", (start) => {
     if (start.code === "Space") {
+      gameplayJump.style.display = "none";
       gameOver.style.display = "none";
       catPlayer.classList.add("cat-running");
       mummy.classList.add("obstacle-moving");
@@ -36,6 +38,7 @@ export function catJump() {
       const catLimit = (window.innerHeight * 15) / 100;
       if (mummyLeft <= catRight && mummyLeft >= catLeft && catBottom <= catLimit) {
         // collision
+        gameplayJump.style.display = "block";
         gameOver.style.display = "block";
         catPlayer.classList.remove("cat-running");
         mummy.classList.remove("obstacle-moving");
