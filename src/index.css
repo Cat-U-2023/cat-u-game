@@ -35,7 +35,7 @@ button {
 }
 
 body {
-  background-color: black;
+  background-color: #000;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -110,19 +110,19 @@ body {
 }
 
 #health {
-  background-color: crimson;
+  background-color: #dc143c;
 }
 
 #hunger {
-  background-color: rgb(255 204 0);
+  background-color: #fc0;
 }
 
 #fun {
-  background-color: rgb(79 227 53);
+  background-color: #4fe335;
 }
 
 #clean {
-  background-color: aquamarine;
+  background-color: #7fffd4;
 }
 
 .frames {
@@ -234,6 +234,24 @@ body {
   text-shadow: 2px 2px 2px #000;
 }
 
+.gameplay-pong {
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top: 10%;
+  font-family: "Press Start 2P", fantasy;
+  font-size: 250%;
+  z-index: -999;
+  text-shadow: 4px 3px 2px #000;
+}
+
+.gameplay-pong p {
+  margin: 5%;
+}
+
+/* minijuego cat-jump */
+
 #close-game-jump {
   font-size: 4rem;
   cursor: pointer;
@@ -247,7 +265,6 @@ body {
   text-shadow: 2px 2px 2px #000;
 }
 
-/* minijuego cat-jump */
 #cat-jump {
   display: none;
   position: absolute;
@@ -408,8 +425,7 @@ body {
   font-size: 200%;
 }
 
-.gameplay-info {
-  position: absolute;
+.gameplay-jump {
   margin-top: 5%;
   font-family: "Press Start 2P", fantasy;
   font-size: 130%;
@@ -448,7 +464,7 @@ body {
   justify-content: center;
   width: 70%;
   height: 50%;
-  color: white;
+  color: #fff;
   text-shadow: 1px 1px 1px #000;
   font-family: "Montserrat alternates", sans-serif;
   background-attachment: fixed;
@@ -458,7 +474,7 @@ body {
 .window-notice .content-buttons {
   display: flex;
   justify-content: center;
-  color: white;
+  color: #fff;
   text-shadow: 1px 1px 1px #000;
   font-family: "Montserrat alternates", sans-serif;
 }
@@ -471,7 +487,7 @@ body {
 .text-center {
   display: flex;
   justify-content: center;
-  color: white;
+  color: #fff;
   text-shadow: 2px 2px 2px #000;
   font-family: "montserrat alternates", sans-serif;
 }
@@ -479,7 +495,7 @@ body {
 button {
   border: none;
   outline: none;
-  color: white;
+  color: #fff;
   background-color: transparent;
   font-family: "montserrat alternates", sans-serif;
   text-shadow: 2px 2px 1px #000;
@@ -570,7 +586,11 @@ button:hover {
     font-size: 150%;
   }
 
-  .gameplay-info {
+  .gameplay-jump {
+    font-size: 100%;
+  }
+
+  .gameplay-pong {
     font-size: 100%;
   }
 
@@ -606,7 +626,11 @@ button:hover {
     font-size: 150%;
   }
 
-  .gameplay-info {
+  .gameplay-jump {
+    font-size: 100%;
+  }
+
+  .gameplay-pong {
     font-size: 100%;
   }
 
@@ -635,7 +659,11 @@ button:hover {
     font-size: 200%;
   }
 
-  .gameplay-info {
+  .gameplay-pong {
+    font-size: 200%;
+  }
+
+  .gameplay-jump {
     font-size: 210%;
   }
 
@@ -664,7 +692,7 @@ button:hover {
     font-size: 200%;
   }
 
-  .gameplay-info {
+  .gameplay-jump {
     font-size: 210%;
   }
 
@@ -688,7 +716,7 @@ button:hover {
     font-size: 400%;
   }
 
-  .gameplay-info {
+  .gameplay-jump {
     font-size: 250%;
   }
 
@@ -712,7 +740,7 @@ button:hover {
     font-size: 400%;
   }
 
-  .gameplay-info {
+  .gameplay-jump {
     font-size: 300%;
   }
 

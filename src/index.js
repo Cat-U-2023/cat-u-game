@@ -68,11 +68,14 @@ const character = document.querySelector(".character");
 const obstacle = document.querySelector(".obstacle");
 const floor = document.querySelector(".floor");
 const bg = document.querySelector(".background-egypt");
+const gameplayPong = document.querySelector(".gameplay-pong");
 
 pongButton.addEventListener("click", () => {
   pongGame.style.display = "block";
   pongGame.style.zIndex = 999;
-  closePong.style.zIndex = 1000;
+  closePong.style.zIndex = 1001;
+  gameplayPong.style.display = "block";
+  gameplayPong.style.zIndex = 1000;
   setGame();
 });
 
@@ -80,6 +83,8 @@ closePong.addEventListener("click", () => {
   pongGame.style.display = "none";
   pongGame.style.zIndex = -999;
   closePong.style.zIndex = -999;
+  gameplayPong.style.display = "none";
+  gameplayPong.style.zIndex = -999;
 });
 
 jumpButton.addEventListener("click", () => {
