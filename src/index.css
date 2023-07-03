@@ -514,7 +514,7 @@ button:hover {
   transition: 0.2s linear;
 }
 
-@media screen and (width <= 450px) {
+@media screen and (width <= 320px) {
   body {
     width: 100%;
     height: 100vh;
@@ -567,7 +567,7 @@ button:hover {
   }
 }
 
-@media screen and (450px < width <= 660px) {
+@media screen and (320px < width <= 660px) {
   body {
     overflow: hidden;
   }
