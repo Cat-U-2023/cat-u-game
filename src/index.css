@@ -749,7 +749,7 @@ button:hover {
   }
 }
 
-@media only screen and (orientation: portrait) {
+/* @media only screen and (orientation: portrait) {
   .container {
     transform: rotate(90deg);
   }
@@ -759,4 +759,4 @@ button:hover {
   .container {
     transform: rotate(0deg);
   }
-}
+} */
