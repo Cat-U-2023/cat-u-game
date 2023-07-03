@@ -34,6 +34,7 @@ function toggleSound() {
 alert.addEventListener("click", closeAlert);
 function closeAlert() {
   windowAlert.style.display = "none";
+  launchFullscreen();
 }
 
 let hunger = 100;
@@ -245,5 +246,5 @@ function decreaseLife() {
 setInterval(decreaseLife, healthInterval);
 
 decreaseLife();
-launchFullscreen();
+
 // exitFullscreen();
