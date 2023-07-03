@@ -748,15 +748,3 @@ button:hover {
     font-size: 2rem;
   }
 }
-
-/* @media only screen and (orientation: portrait) {
-  .container {
-    transform: rotate(90deg);
-  }
-}
-
-@media only screen and (orientation: landscape) {
-  .container {
-    transform: rotate(0deg);
-  }
-} */
