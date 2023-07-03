@@ -1,12 +1,7 @@
-export function launchFullscreen(element) {
-    if (element.requestFullscreen) {
-        element.requestFullscreen();
-    }...
-}
+const element = document.querySelector(".container");
 
-// desactiva el FullScreen
-export function exitFullscreen() {
-    if (document.exitFullscreen) {
-        document.exitFullscreen();
-    }...
+export function launchFullscreen(screen) {
+  if (element.requestFullscreen) {
+    element.requestFullscreen();
+  }
 }
