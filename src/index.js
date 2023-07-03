@@ -1,6 +1,5 @@
 import { setGame } from "./modules/pong.js";
 import { catJump } from "./modules/cat-jump.js";
-import { fullscreen } from "./modules/fullscreen.js";
 const songs = document.querySelector(".music");
 const musicButton = document.querySelector(".menu img");
 const healthBar = document.getElementById("health");
@@ -32,7 +31,6 @@ function toggleSound() {
 alert.addEventListener("click", closeAlert);
 function closeAlert() {
   windowAlert.style.display = "none";
-  fullscreen();
 }
 
 let hunger = 100;
