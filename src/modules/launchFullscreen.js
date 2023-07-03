@@ -1,4 +1,4 @@
-const element = document.querySelector(".container");
+const element = document.querySelector("body");
 
 export function launchFullscreen(screen) {
   if (element.requestFullscreen) {
