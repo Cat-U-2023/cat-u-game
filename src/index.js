@@ -1,6 +1,6 @@
 import { setGame } from "./modules/pong.js";
 import { catJump } from "./modules/cat-jump.js";
-import { Fullscreen } from "./modules/launchFullscreen.js";
+import { launchFullscreen } from "./modules/launchFullscreen.js";
 
 const songs = document.querySelector(".music");
 const musicButton = document.querySelector(".menu img");
@@ -33,7 +33,7 @@ function toggleSound() {
 alert.addEventListener("click", closeAlert);
 function closeAlert() {
   windowAlert.style.display = "none";
-  Fullscreen();
+  launchFullscreen();
 }
 
 let hunger = 100;
@@ -245,3 +245,5 @@ function decreaseLife() {
 setInterval(decreaseLife, healthInterval);
 
 decreaseLife();
+
+// exitFullscreen();
