@@ -1,7 +1,7 @@
 import { setGame } from "./modules/pong.js";
 import { catJump } from "./modules/cat-jump.js";
 import { launchFullscreen } from "./modules/launchFullscreen.js";
-import { exitFullscreen } from "./modules/exitFullscreen.js";
+// import { exitFullscreen } from "./modules/exitFullscreen.js";
 
 const songs = document.querySelector(".music");
 const musicButton = document.querySelector(".menu img");
@@ -246,4 +246,4 @@ setInterval(decreaseLife, healthInterval);
 
 decreaseLife();
 launchFullscreen();
-exitFullscreen();
+// exitFullscreen();
