@@ -33,8 +33,8 @@ function toggleSound() {
 alert.addEventListener("click", closeAlert);
 function closeAlert() {
   windowAlert.style.display = "none";
-  screen.orientation.lock("landscape");
   launchFullscreen();
+  screen.orientation.lock("landscape");
 }
 
 let hunger = 100;
