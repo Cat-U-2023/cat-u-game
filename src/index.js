@@ -35,6 +35,7 @@ function closeAlert() {
   windowAlert.style.display = "none";
   launchFullscreen();
   screen.orientation.lock("landscape");
+  window.o9n.orientation.lock("landscape");
 }
 
 let hunger = 100;
