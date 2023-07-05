@@ -33,6 +33,7 @@ function toggleSound() {
 alert.addEventListener("click", closeAlert);
 function closeAlert() {
   windowAlert.style.display = "none";
+  screen.orientation.lock("landscape");
   launchFullscreen();
 }
 
